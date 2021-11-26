@@ -12,7 +12,7 @@
                             <li @click="$router.push('/about')"><a href="#">About</a></li>
                             <!-- <li><router-link to="/about">About</router-link></li> -->
                             <li><a href="#">Works</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Contact</a></li>  
                         </ul>
                     </div>
                 </nav>
