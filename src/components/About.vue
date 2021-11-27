@@ -74,7 +74,7 @@
     .about {
         position: relative;
         display: flex;
-        padding-top: 9rem;
+        padding-top: 6rem;
         width: 100%;
         height: 100vh;
     }
@@ -93,7 +93,7 @@
         display: block;
         margin: 0 auto;
         padding-top: 9rem;
-        margin-bottom: 3rem;
+        margin-bottom: 6rem;
     }
 
     .about-left__title h4 {
@@ -109,14 +109,14 @@
         position: relative;
         display: block;
         margin-bottom: 6rem;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .about-left__content {
         position: relative;
         display: flex;
         flex-direction: column;
-        text-align: center;
+        /* text-align: center; */
     }
 
     .about-left__content p {
