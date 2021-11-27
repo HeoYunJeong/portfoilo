@@ -10,14 +10,17 @@
                             alt="I’m a Positive Waves Surfer">
                     </div>
                     <div class="about-left__content">
-                        <p> 저는 상대의 감정을 헤아리는 <span>공감 능력</span>이 뛰어납니다.<br>상대방의 기술적 배경을 고려해 제 생각을 <span>조리 있게
-                                설명</span>하고자 합니다.<br><span>건설적인 대화</span>를 위해 작은 토론도 <span>목적</span>과 <span>목표</span>를
+                        <p>저는 상대의 감정을 헤아리는 <span>공감 능력</span>이 뛰어납니다.<br>상대방의 기술적 배경을 고려해 제 생각을 <span>조리 있게
+                                설명</span>하고자 합니다.<br><span>건설적인 대화</span>를 위해 작은 토론도 <span>목적</span>과
+                            <span>목표</span>를
                             분명히 합니다.</p>
-                        <p> 과 대표, 평창올림픽 식음료팀 부팀장으로서 <span>팀을 이끌어 보기도 하고</span> 다양한 조직사회의 <span>팔로워</span>가 되어보기도 했습니다.
-                            이를 통해 <span>건강한 커뮤니케이션의 메커니즘</span>에 대하여 깊이 고민하고 이해할 수 있었습니다.</p>
-                        <p> 제가 생각하는 <span>소통</span>의 가장 중요한 <span>주춧돌</span>은 <span>긍정과 존중</span>입니다.<br>긍정과 존중을 바탕으로
-                            <span>상대방의 관점을 이해</span>하는 것이 <span>생산적인 소통</span>의 <span>시작</span>이라고 생각합니다. 앞선 통찰과 경험을 토대로
-                            다른 직군과도 원활하게 협업하고 나아가 <span>함께 일하고 싶은 동료</span>가 되겠습니다.</p>
+                        <p>과대표, 평창올림픽 식음료팀 리더로서<span> 팀을 이끌어 보기도 하고</span><br>다양한 조직사회의 <span>팔로워</span>를 경험
+                            했습니다.
+                            <br>이를 통해 <span>건강한 커뮤니케이션의 메커니즘</span>에 대하여 <br>깊이 고민하고 이해했습니다.</p>
+                        <p><span>소통의 주춧돌</span>은 <span>긍정과 존중</span>이라고 생각합니다.<br>이를
+                            바탕으로한 <span>이해</span>로 <span>생산적인 소통</span>을 <span>시작</span>합니다. <br>앞선 통찰을
+                            토대로
+                            다른 직군과 원활히 협업하고 <br><span>함께 일하고 싶은 동료</span>가 되겠습니다.</p>
                     </div>
                 </div>
                 <div class="about-right">
@@ -63,7 +66,7 @@
 
 <script>
     export default {
-        name : 'about',
+        name: 'about',
     }
 </script>
 
@@ -71,7 +74,7 @@
     .about {
         position: relative;
         display: flex;
-        padding-top: 12rem;
+        padding-top: 9rem;
         width: 100%;
         height: 100vh;
     }
@@ -89,8 +92,8 @@
         position: relative;
         display: block;
         margin: 0 auto;
-        padding-top: 10.5rem;
-        margin-bottom: 8.5rem;
+        padding-top: 9rem;
+        margin-bottom: 3rem;
     }
 
     .about-left__title h4 {
@@ -106,20 +109,23 @@
         position: relative;
         display: block;
         margin-bottom: 6rem;
+        text-align: center;
     }
 
     .about-left__content {
         position: relative;
         display: flex;
         flex-direction: column;
+        text-align: center;
     }
 
     .about-left__content p {
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 100;
         font-size: 1.8rem;
+        line-height: 1.8;
         color: #fff;
-        margin-bottom: 6rem;
+        margin-bottom: 5rem;
         word-break: keep-all;
     }
 
@@ -152,7 +158,7 @@
         text-align: center;
     }
 
-    .personal-data > div {
+    .personal-data>div {
         margin-bottom: 1rem;
     }
 
