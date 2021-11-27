@@ -29,7 +29,6 @@ export default {
 
 <style>
 
-
 .header {
     position: absolute;
     left: 0;

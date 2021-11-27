@@ -36,7 +36,7 @@ export default {
 .main {
     position: relative;
     display: flex;
-    padding-top: 12rem;
+    padding-top: 9rem;
     width: 100%;
     height: 100vh;
 }
