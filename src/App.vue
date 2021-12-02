@@ -4,10 +4,12 @@
 </template>
 <script>
 import Header from './components/Header.vue';
-
   export default {
-
     name: 'App',
+    data() {
+      return{
+      }
+    },
     components: {
       Header,
     }
@@ -24,6 +26,7 @@ import Header from './components/Header.vue';
   }
   a {
     color: #0b1015;
+    text-decoration: none;
   }
   button {
     background: none;

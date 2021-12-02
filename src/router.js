@@ -5,6 +5,7 @@ import {
 import About from './components/About.vue';
 import Home from './components/main.vue';
 import Work from './components/Work.vue';
+import Contact from './components/Contact.vue';
 
 const routes = [{
         path: "/",
@@ -17,6 +18,10 @@ const routes = [{
     {
         path: "/work",
         component: Work,
+    },
+    {
+        path: "/Contact",
+        component: Contact,
     },
 ];
 

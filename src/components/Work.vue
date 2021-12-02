@@ -38,6 +38,14 @@
                     </div>
                 </div>
                 <div class="work-right">
+                    <div class="work-right__menu">
+                        <p @click="showPub">퍼블리싱</p>
+                        <p @click="showDes">디자인</p>
+                    </div>
+                    <div class="work-right__view">
+                        <Publishing v-if="pubShow==true"/>
+                        <Design v-if="designShow==true"/>
+                    </div>
                 </div>
             </section>
         </div>
@@ -45,8 +53,36 @@
 </template>
 
 <script>
+    import Publishing from '../components/WorkPub.vue';
+    import Design from '../components/WorkDesign.vue';
+
     export default {
         name: 'work',
+        props: {},
+        components: {
+            Publishing,
+            Design,
+        },
+        data() {
+            return {
+                pubShow: true,
+                designShow: false,
+            }
+        },
+        methods : {
+            showPub(){
+                if(this.pubShow == false){
+                    this.pubShow = true
+                    this.designShow = false
+                }  
+            },
+            showDes(){
+                if(this.designShow == false){
+                    this.designShow = true
+                    this.pubShow = false
+                }  
+            },
+        },
     }
 </script>
 
@@ -102,7 +138,7 @@
         margin: 0 auto;
     }
 
-    .skill-container__top, 
+    .skill-container__top,
     .skill-container__bottom {
         position: relative;
         display: flex;
@@ -131,7 +167,6 @@
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 100;
         font-size: 1.6rem;
-        transform: scale(1, 0.9);
         color: #fff;
         text-transform: capitalize;
         text-align: center;
@@ -145,5 +180,28 @@
         justify-content: center;
         width: 50%;
         padding-left: 9rem;
+    }
+
+    .work-right__menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 10rem;
+    }
+
+    .work-right__menu p {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 400;
+        font-size: 1.8rem;
+        color: #12437e;
+        text-align: center;
+        margin-right: 6rem;
+        cursor: pointer;
+    }
+
+    .work-right__view {
+        position: relative;
+        width: 57rem;
+        height: 51rem;
     }
 </style>
