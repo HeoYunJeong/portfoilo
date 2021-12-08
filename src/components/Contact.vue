@@ -1,21 +1,24 @@
 <template>
     <div class="mainPage">
         <div class="wrap">
-            <section class="main ">
-                <div class="main-left">
-                    <h1>&#60; GitHub &#62;</h1>
-                    <h3> If you interested in my works, Please click on the GitHub icon&#160;&#160;<i
-                            class="far fa-laugh-beam"></i></h3>
-                    <a href="https://github.com/HeoYunJeong" target="_blank"><i class="fab fa-github-square fa-9x"></i></a>
-                </div>
-                <div class="main-right">
-
-                    <h1>&#60; kakaotalk Open Chat &#62;</h1>
-                    <h3>Please feel free to contact me at any time&#160;&#160;<i
-                            class="far fa-laugh-beam"></i></h3>
-                    <div class="main-right__img">
-                        <!-- <img src="../assets/QRcode.jpg" alt="qr코드"> -->
+            <section class="contact">
+                <div class="contact-left">
+                    <h1 class="title left-title">&#60; GitHub &#62;</h1>
+                    <p class="messege left-messege"> If you interested in my works, Please click on the GitHub icon&#160;
+                        <i class="far fa-laugh-beam"></i></p>
+                    <div class="github-img">
+                        <a href="https://github.com/HeoYunJeong" target="_blank"><i
+                                class="fab fa-github-square"></i></a>
                     </div>
+                </div>
+                <div class="contact-right">
+                    <h1 class="title right-title">&#60; kakaotalk Open Chat &#62;</h1>
+                    <p class="messege right-messege">Please feel free to contact me at any time&#160;
+                        <i class="far fa-laugh-beam"></i></p>
+                    <div class="qrcode__img">
+                    </div>
+                    <p class="thank-messege">Thank you for taking time out of your busy schedule to read my portfolio.
+                    </p>
                 </div>
             </section>
         </div>
@@ -37,7 +40,7 @@
         clear: both;
     }
 
-    .main {
+    .contact {
         position: relative;
         display: flex;
         padding-top: 6rem;
@@ -45,54 +48,66 @@
         height: 100vh;
     }
 
-    .main h1 {
-        font-family: 'Playfair Display', serif;
-        font-weight: 700;
-        transform: scale(1, 0.9);
-        color: #383437;
-        margin-top: -6rem;
-        margin-bottom: 2rem;
-    }
-
-    .main h3 {
-        /* font-family: 'Playfair Display', serif; */
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 400;
-        /* transform: scale(1, 0.9); */
-        color: #675f65;
-        margin-bottom: 5rem;
-    }
-
-    .main-left {
+    .contact-left {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        /* justify-content: center; */
         align-items: center;
         width: 50%;
         padding-right: 9rem;
     }
 
-    .main-left h1 {
+    .title {
+        position: relative;
+        font-family: 'Playfair Display', serif;
+        font-weight: 700;
+        transform: scale(1, 0.9);
         color: #fff;
     }
 
-    .main-left i {
-        font-size: 40rem;
-        color: #fff;
+    .left-title {
+        position: relative;
+        margin-top: 16rem;
     }
 
-    .main-left h3 {
+
+    .messege {
+        /* font-family: 'Playfair Display', serif; */
+        font-family: 'Noto Sans KR', sans-serif;
         font-weight: 100;
+        font-size: 1.8rem;
+        /* transform: scale(1, 0.9); */
         color: #fff;
     }
 
-    .main-left h3 > i {
-        font-size: 2.7rem;
+    .left-messege {
+        margin-top: 1rem;
+        margin-bottom: 10rem;
+    }
+
+    .messege i {
+        font-size: 2.5rem;
         color: #fff;
     }
 
-    .main-right {
+    .github-img {
+        position: relative;
+        display: block;
+    }
+
+    .github-img i {
+        font-size: 30rem;
+        color: #fff;
+        transition: all 0.5s;
+    }
+
+    .github-img i:hover {
+        font-size: 40rem;
+        transform: translateY(-5rem);
+    }
+
+    .contact-right {
         position: relative;
         display: flex;
         flex-direction: column;
@@ -102,12 +117,17 @@
         padding-left: 9rem;
     }
 
-
-    .main-right i {
-        font-size: 2.7rem;
+    .right-title {
+        color: #383437;
     }
 
-    .main-right__img {
+    .right-messege,
+    .right-messege i {
+        font-weight: 400;
+        color: #675f65;
+    }
+
+    .qrcode__img {
         position: relative;
         display: block;
         /* border: 3px solid #cdc3c8; */
@@ -116,11 +136,17 @@
         /* border-radius: 2rem; */
         background: url(../assets/QRcode.jpg) no-repeat center;
         background-size: 40rem;
+        /* margin-bottom: 3rem; */
     }
 
-    /* .main-right img {
-        position: relative;
-        display: block;
-        width: 40rem;
-    } */
+    .thank-messege {
+        /* font-family: 'Playfair Display', serif; */
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+        /* transform: scale(1, 0.9); */
+        color: #12437e;
+        /* margin-bottom: 5rem; */
+        text-align: center;
+    }
 </style>
