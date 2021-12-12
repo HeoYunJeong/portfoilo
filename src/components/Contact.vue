@@ -1,28 +1,29 @@
 <template>
-    <div class="mainPage">
-        <div class="wrap">
-            <section class="contact">
-                <div class="contact-left">
-                    <h1 class="title left-title">&#60; GitHub &#62;</h1>
-                    <p class="messege left-messege"> If you interested in my works, Please click on the GitHub icon&#160;
-                        <i class="far fa-laugh-beam"></i></p>
-                    <div class="github-img">
-                        <a href="https://github.com/HeoYunJeong" target="_blank"><i
-                                class="fab fa-github-square"></i></a>
-                    </div>
+    <section class="contact">
+        <div class="container">
+            <article class="contact-left">
+                <h1 class="title left-title">&#60; GitHub &#62;</h1>
+                <p class="messege left-messege"> If you interested in my works, Please click on the GitHub
+                    icon&#160;
+                    <i class="far fa-laugh-beam"></i></p>
+                <div class="github-img">
+                    <a href="https://github.com/HeoYunJeong" target="_blank"><i class="fab fa-github-square"></i></a>
                 </div>
-                <div class="contact-right">
-                    <h1 class="title right-title">&#60; kakaotalk Open Chat &#62;</h1>
-                    <p class="messege right-messege">Please feel free to contact me at any time&#160;
-                        <i class="far fa-laugh-beam"></i></p>
-                    <div class="qrcode__img">
-                    </div>
-                    <p class="thank-messege">Thank you for taking time out of your busy schedule to read my portfolio.
-                    </p>
-                </div>
-            </section>
+            </article>
+            <article class="contact-right">
+                <h1 class="title right-title">&#60; kakaotalk Open Chat &#62;</h1>
+                <p class="messege right-messege">Please feel free to contact me at any time&#160;
+                    <i class="far fa-laugh-beam"></i></p>
+
+                <a href="https://open.kakao.com/o/szHWNSMd" target="_blank">
+                    <div class="qrcode__img"></div>
+                </a>
+
+                <p class="thank-messege">Thank you for taking time out of your <br>busy schedule to read my portfolio.
+                </p>
+            </article>
         </div>
-    </div>
+    </section>
 </template>
 
 <script>
@@ -32,58 +33,53 @@
 </script>
 
 <style>
-    .clearfix::after {
-        content: '';
+    .contact {
         position: relative;
         display: block;
         width: 100%;
-        clear: both;
-    }
-
-    .contact {
-        position: relative;
-        display: flex;
-        padding-top: 6rem;
-        width: 100%;
-        height: 100vh;
     }
 
     .contact-left {
         position: relative;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
         align-items: center;
         width: 50%;
         padding-right: 9rem;
+        animation: slide-right 1s;
+    }
+
+    @keyframes slide-right {
+        0% {
+            opacity: 0;
+            transform: translateX(-10rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0);
+        }
     }
 
     .title {
         position: relative;
+        font-size: 2.5rem;
         font-family: 'Playfair Display', serif;
         font-weight: 700;
         transform: scale(1, 0.9);
         color: #fff;
+        margin-bottom: 1rem;
     }
-
-    .left-title {
-        position: relative;
-        margin-top: 16rem;
-    }
-
 
     .messege {
-        /* font-family: 'Playfair Display', serif; */
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 100;
         font-size: 1.8rem;
-        /* transform: scale(1, 0.9); */
         color: #fff;
     }
 
     .left-messege {
-        margin-top: 1rem;
-        margin-bottom: 10rem;
+        margin-bottom: 6rem;
     }
 
     .messege i {
@@ -103,7 +99,7 @@
     }
 
     .github-img i:hover {
-        font-size: 40rem;
+        font-size: 35rem;
         transform: translateY(-5rem);
     }
 
@@ -111,10 +107,11 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-end;
         align-items: center;
         width: 50%;
         padding-left: 9rem;
+        animation: slide-left 1s;
     }
 
     .right-title {
@@ -130,23 +127,30 @@
     .qrcode__img {
         position: relative;
         display: block;
-        /* border: 3px solid #cdc3c8; */
         width: 40rem;
         height: 40rem;
-        /* border-radius: 2rem; */
         background: url(../assets/QRcode.jpg) no-repeat center;
         background-size: 40rem;
-        /* margin-bottom: 3rem; */
     }
 
+    @keyframes slide-left {
+        0% {
+            opacity: 0;
+            transform: translateX(10rem);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(0rem);
+        }
+    }
+
+
     .thank-messege {
-        /* font-family: 'Playfair Display', serif; */
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 700;
         font-size: 2.5rem;
-        /* transform: scale(1, 0.9); */
         color: #12437e;
-        /* margin-bottom: 5rem; */
         text-align: center;
     }
 </style>

@@ -3,7 +3,7 @@ import {
     createRouter
 } from "vue-router";
 import About from './components/About.vue';
-import Home from './components/main.vue';
+import Home from './components/Main.vue';
 import Work from './components/Work.vue';
 import Contact from './components/Contact.vue';
 
