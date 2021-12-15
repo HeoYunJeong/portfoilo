@@ -1,20 +1,32 @@
 <template>
     <swiper class="swiper" v-bind="swiperOptions" :modules="moudules">
         <swiper-slide class="swiper-slide01">
-            <div class="overlay"></div>
-            <p><a href="https://heoyunjeong.github.io/STXconst/" target="_blank">STX건설</a></p>
+            <div class="overlay">
+                <div class="overlay-contents">
+                    <p class="overlay-contents__name">STX건설</p>
+                    <p class="overlay-contents__lang">html css jquery</p>
+                    <p class="overlay-contents__time">2 weeks</p>
+                    <p class="overlay-contents__link">
+                        <a href="https://heoyunjeong.github.io/STXconst/" target="_blank"
+                            class="overlay-contents__clone"><i class="fab fa-github-square"></i></a>
+                        <a href="http://www.stxconst.co.kr/" target="_blank" class="overlay-contents__original"><i
+                            class="fas fa-window-maximize"></i></a>
+                    </p>
+                </div>
+            </div>
+            <a href="https://heoyunjeong.github.io/STXconst/" target="_blank"></a>
         </swiper-slide>
         <swiper-slide class="swiper-slide02">
             <div class="overlay"></div>
-            <p><a href="https://heoyunjeong.github.io/SONY/" target="_blank">SONY 코리아</a></p>
+            <a href="https://heoyunjeong.github.io/SONY/" target="_blank"></a>
         </swiper-slide>
         <swiper-slide class="swiper-slide03">
             <div class="overlay"></div>
-            <p><a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">넥서스 플래그십</a></p>
+            <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank"></a>
         </swiper-slide>
         <swiper-slide class="swiper-slide04">
             <div class="overlay"></div>
-            <p><a href="https://heoyunjeong.github.io/inha-university/" target="_blank">인하대학교</a></p>
+            <a href="https://heoyunjeong.github.io/inha-university/" target="_blank"></a>
         </swiper-slide>
     </swiper>
 </template>
@@ -55,7 +67,7 @@
                     centeredSlides: true,
                     loop: true,
                     autoplay: {
-                        "delay": 2500,
+                        "delay": 3000,
                         "disableOnInteraction": false
                     },
                     pagination: {
@@ -103,13 +115,22 @@
         height: 100%;
         display: block;
         border-radius: 5rem;
-
         background: rgba(0, 0, 0, 0.5);
         opacity: 0;
         transition: all 0.2s;
+        z-index: 9;
     }
 
     .overlay:hover {
         opacity: 1;
+    }
+
+    .overlay-contents {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 1.8rem;
+        color: #fff;
     }
 </style>

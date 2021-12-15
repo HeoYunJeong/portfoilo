@@ -2,19 +2,19 @@
     <swiper class="swiper" v-bind="swiperOptions" :modules="moudules">
         <swiper-slide class="swiper-slide01">
             <div class="overlay"></div>
-            <p><a href="https://heoyunjeong.github.io/STXconst/" target="_blank">하바나우냐냐</a></p>
+            <a href="https://heoyunjeong.github.io/STXconst/" target="_blank">하바나우냐냐</a>
         </swiper-slide>
         <swiper-slide class="swiper-slide02">
             <div class="overlay"></div>
-            <p><a href="https://heoyunjeong.github.io/SONY/" target="_blank">SONY 코리아</a></p>
+            <a href="https://heoyunjeong.github.io/SONY/" target="_blank">SONY 코리아</a>
         </swiper-slide>
         <swiper-slide class="swiper-slide03">
             <div class="overlay"></div>
-            <p><a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">넥서스 플래그십</a></p>
+            <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">넥서스 플래그십</a>
         </swiper-slide>
         <swiper-slide class="swiper-slide04">
             <div class="overlay"></div>
-            <p><a href="https://heoyunjeong.github.io/inha-university/" target="_blank">인하대학교</a></p>
+            <a href="https://heoyunjeong.github.io/inha-university/" target="_blank">인하대학교</a>
         </swiper-slide>
     </swiper>
 </template>
@@ -55,7 +55,7 @@
                     centeredSlides: true,
                     loop: true,
                     autoplay: {
-                        "delay": 2500,
+                        "delay": 3000,
                         "disableOnInteraction": false
                     },
                     pagination: {

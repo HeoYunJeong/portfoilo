@@ -37,10 +37,11 @@
                                 <p>1995.10.02</p>
                             </div>
                         </div>
+                        <div class="personal-data__bottom">
                         <div class="personal-data__education">
                             <p class="personal-data__title">education</p>
                             <p>항공서비스전공<span>정화예술대학교 관광학부</span></p>
-                            <p>PWA 제작 웹앱 프론트엔드 개발 양성과정<span>(주)지아이티아카데미 대구</span></p>
+                            <p>PWA 제작 웹앱 프론트엔드 개발과정<span>(주)지아이티아카데미 대구</span></p>
                         </div>
                         <div class="personal-data__certificate">
                             <p class="personal-data__title">certificate</p>
@@ -48,13 +49,14 @@
                             <p>바리스타 2급</p>
                             <p>운전면허 2종 보통</p>
                         </div>
+                        </div>
                     </article>
                 </div>
                 <article class="about-right__right">
-                    <div class="slogan top">
+                    <div class="slogan slogan-top">
                         <p class="slogan-title">작은 <span>긍정의 파도</span>가<br><span>큰 발전</span>을 이끈다고 믿습니다</p>
-                        <p class="slogan-content">함께 익히고 함께 고민하고<br>함께 만들어가는 것이 개발이라고 생각합니다.<br>적극적으로 참여하고 사려깊게
-                            경청하는<br>개발자 허윤정 입니다.</p>
+                        <p class="slogan-content">함께 익히고 함께 고민하고 함께 만들어가는 것이 개발이라고 생각합니다.<br>적극적으로 참여하고 사려깊게
+                            경청하는 개발자 허윤정 입니다.</p>
                     </div>
                     <div class="bottom"><img src="../assets/about-img-2.png" alt="photo1"></div>
                 </article>
@@ -216,6 +218,10 @@
         margin-bottom: 0.5rem;
     }
 
+    .personal-data__education p:last-child {
+        margin-bottom: 0.5rem;
+    }
+
     .about-right__right {
         position: relative;
         display: flex;
@@ -228,6 +234,7 @@
     .slogan {
         position: relative;
         display: block;
+        word-break: keep-all;
     }
 
     .slogan-title {
@@ -256,7 +263,8 @@
         margin-top: 6rem;
     }
 
-    .top {
+    .top,
+    .slogan-top {
         animation: slide-left 1s;
     }
 
@@ -272,6 +280,144 @@
 
         100% {
             transform: translateX(0);
+        }
+    }
+
+
+
+    /* about 영역 반응형 : 1024px */
+    @media screen and (max-width:1024px) {
+        .about .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .about-left {
+            margin-right: 0rem;
+        }
+
+        .about-left__title {
+            margin-bottom: 3rem;
+        }
+
+        .about-left__title h4 {
+            font-size: 1.6rem;
+        }
+
+        .about-left__intro {
+            margin-bottom: 3rem;
+            width: 30rem;
+            height: 3rem;
+        }
+
+        .about-left__content p {
+            font-size: 1.4rem;
+            line-height: 1.8;
+            color: #fff;
+            margin-bottom: 4rem;
+            word-break: keep-all;
+        }
+
+        .about-left__content p:last-child {
+            margin-bottom: 0rem;
+        }
+
+        .about-left__content span {
+            font-weight: 500;
+        }
+
+
+
+        /* about-right 반응형 */
+
+        .about-right {
+            margin-left: 0rem;
+            display: flex;
+            flex-direction: column;
+        }
+
+
+        .about-right__left {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .top {
+            width: 20rem;
+            display: block;
+            text-align: center;
+        }
+
+        .top img {
+            width: 100%;
+        }
+
+        .personal-data {
+            padding-top: 3rem;
+            font-size: 1.2rem;
+            width: 85%;
+        }
+
+        .personal-data>div {
+            margin-bottom: 1.5rem;
+        }
+
+        .personal-data__title,
+        .important {
+            font-size: 1.2rem;
+            line-height: 2.2rem;
+        }
+
+        .important {
+            width: 20rem;
+        }
+
+        .personal-data span {
+            display: block;
+            font-size: 1.2rem;
+        }
+
+        .personal-data__bottom {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .personal-data__bottom div {
+            width: 20rem;
+        }
+
+        .about-right__right {
+            margin-left: 0rem;
+            flex-direction: row;
+        }
+
+        .slogan-top {
+            width: 85%;
+            flex-direction: row;
+        }
+
+        .slogan-title {
+            font-size: 1.6rem;
+            line-height: 2.2rem;
+            text-align: center;
+
+        }
+
+        .slogan-content {
+            font-size: 1.2rem;
+            line-height: 2rem;
+            margin-top: 1.5rem;
+            text-align: center;
+
+        }
+
+        .about-right__right img {
+            display: none;
         }
     }
 </style>

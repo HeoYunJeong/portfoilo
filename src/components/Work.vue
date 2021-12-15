@@ -7,8 +7,8 @@
             </article>
             <article class="work-right">
                 <div class="work-right__menu">
-                    <p @click="showPub">퍼블리싱</p>
-                    <p @click="showDes">디자인</p>
+                    <p @click="showPub" :class="{work_right_focus: pubShow==true}">퍼블리싱</p>
+                    <p @click="showDes" :class="{work_right_focus: designShow==true}">디자인</p>
                 </div>
                 <div class="work-right__view">
                     <Publishing v-if="pubShow==true" />
@@ -98,31 +98,65 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        justify-content: center;
         width: 45%;
-        height: 66rem;
+        height: 65rem;
         margin-left: 6rem;
     }
+
 
     .work-right__menu {
         position: relative;
         display: flex;
-        justify-content: space-around;
-        margin-bottom: 3rem;
+        justify-content: center;
+        margin-bottom: 6rem;
     }
 
     .work-right__menu p {
+        width: 15%;
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 400;
         font-size: 1.8rem;
         color: #12437e;
         text-align: center;
+        margin-right: 9rem;
         cursor: pointer;
     }
 
-    .work-right__view{
+    .work-right__menu p:last-child {
+        margin-right: 0rem;
+    }
+
+    .work_right_focus {
+        /* background: #12437e;
+        color: #fff !important;
+        border-radius: 0.5rem;
+        text-decoration: underline; */
+        text-underline-position: under;
+        text-decoration: solid underline rgba(18, 67, 126, 0.8) 0.5rem;
+        transition: all 1s;
+    }
+
+    .work-right__view {
         width: 100%;
         height: 55rem;
+        border: 1px solid #12437e;
+        border-radius: 3rem;
+        box-shadow: 1.5rem 1.5rem rgba(18, 67, 126, 0.8);
+        padding-top: 5rem;
+        animation: shadow-pop-br 1s;
+    }
+
+    @keyframes shadow-pop-br {
+        0% {
+            box-shadow: 0 0 rgba(18, 67, 126, 0.3);
+            opacity: 0;
+        }
+
+        100% {
+            box-shadow: 15px 15px rgba(18, 67, 126, 0.8);
+            opacity: 1;
+        }
     }
 
     .swiper {
@@ -130,7 +164,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        padding-bottom: 5rem;
+        padding-bottom: 6rem;
     }
 
     .swiper .swiper-slide {
@@ -138,18 +172,64 @@
         border-radius: 5rem;
     }
 
-    .swiper .swiper-slide p {
+    /* .swiper .swiper-slide a {
         position: relative;
+        display: block;
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 500;
         font-size: 1.8rem;
-        color: #fff;
         text-align: center;
         padding-top: 10rem;
         text-decoration: none;
-    }
+        color: #fff;
+    } */
 
-        .swiper .swiper-slide p a {
-            color: #fff;
+    /* work 영역 반응형 : 1024px */
+    @media screen and (max-width:1024px) {
+
+        .work-left {
+            margin-right: 0rem;
+            justify-content: center;
         }
+
+        .work-left__title {
+            font-size: 1.6rem;
+        }
+
+        /* work 오른쪽 반응형 1024 */
+        .work-right {
+            width: 45%;
+            height: 50rem;
+            margin-left: 0rem;
+            display: flex;
+            justify-content: center;
+        }
+
+        .work-right__menu {
+            width: 85%;
+            margin-bottom: 3rem;
+        }
+
+        .work-right__menu p {
+            font-size: 1.4rem;
+            margin-right: 3rem;
+        }
+
+        .work-right__menu p:last-child {
+            margin-right: 0rem;
+            font-size: 1.4rem;
+
+        }
+
+        .work-right__view {
+            width: 85%;
+            height: 40rem;
+            border: 1px solid #12437e;
+            border-radius: 3rem;
+            box-shadow: 1.5rem 1.5rem rgba(18, 67, 126, 0.8);
+            padding-top: 5rem;
+            animation: shadow-pop-br 1s;
+        }
+
+    }
 </style>

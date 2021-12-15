@@ -3,7 +3,7 @@
         <div class="container">
             <article class="contact-left">
                 <h1 class="title left-title">&#60; GitHub &#62;</h1>
-                <p class="messege left-messege"> If you interested in my works, Please click on the GitHub
+                <p class="messege left-messege"> If you interested in my works, <br>Please click on the GitHub
                     icon&#160;
                     <i class="far fa-laugh-beam"></i></p>
                 <div class="github-img">
@@ -79,6 +79,7 @@
     }
 
     .left-messege {
+        text-align: center;
         margin-bottom: 6rem;
     }
 
@@ -152,5 +153,63 @@
         font-size: 2.5rem;
         color: #12437e;
         text-align: center;
+    }
+
+    /* contact 영역 반응형 : 1024px */
+    @media screen and (max-width:1024px) {
+
+        .contact .container {
+            justify-content: space-between;
+        }
+
+        .contact-left {
+            padding-right: 0rem;
+            margin-left: 0rem;
+        }
+
+        .title {
+            font-size: 1.8rem;
+        }
+
+        .messege {
+            font-size: 1.4rem;
+        }
+
+        .left-messege {
+            margin-bottom: 3rem;
+        }
+
+        .messege i {
+            font-size: 2.5rem;
+        }
+
+        .github-img i {
+            font-size: 25rem;
+        }
+
+        .github-img i:hover {
+            font-size: 30rem;
+        }
+
+        /* 컨택트 오른쪽 반응형 1024 */
+
+        .contact-right {
+            padding-left: 0rem;
+        }
+
+        .qrcode__img {
+            width: 30rem;
+            height: 30rem;
+            background-size: 25rem;
+        }
+
+        .thank-messege {
+            font-family: 'Noto Sans KR', sans-serif;
+            font-weight: 700;
+            font-size: 1.8rem;
+            color: #12437e;
+            text-align: center;
+        }
+
     }
 </style>

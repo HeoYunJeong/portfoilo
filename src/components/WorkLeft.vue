@@ -109,7 +109,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     /* 스킬 박스 */
 
     .skill {
@@ -125,7 +125,7 @@
         position: relative;
         display: block;
         width: 80%;
-        padding: 3rem;
+        padding: 2.5rem;
         border: 1px solid rgba(255, 255, 255, 0.7);
         border-radius: 3rem;
         box-shadow: 1.5rem 1.5rem rgba(255, 255, 255, 0.7);
@@ -135,7 +135,7 @@
 
     @keyframes shadow-pop-br {
         0% {
-            box-shadow: 0 0 rgba(255, 255, 255, 0.5), 0 0 rgba(255, 255, 255, 0.5), 0 0 rgba(255, 255, 255, 0.5), 0 0 rgba(255, 255, 255, 0.5), 0 0 rgba(255, 255, 255, 0.5), 0 0 rgba(255, 255, 255, 0.5), 0 0 rgba(255, 255, 255, 0.5), 0 0 rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 rgba(255, 255, 255, 0.3);
             opacity: 0;
         }
 
@@ -257,5 +257,32 @@
 
     .fade-enter-to {
         opacity: 1;
+    }
+
+        /* workleft 영역 반응형 : 1024px */
+    @media screen and (max-width:1024px) {
+
+    .skill-img {
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+
+    .skill-img i {
+        font-size: 4rem;
+    }
+
+        .skill-contents {
+        height: 25rem;
+    }
+
+    .skill-contents p {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 100;
+        line-height: 1.8;
+        font-size: 1.4rem;
+        color: #fff;
+        word-break: keep-all;
+    }
+
     }
 </style>

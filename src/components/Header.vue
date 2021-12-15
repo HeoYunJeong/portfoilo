@@ -87,4 +87,28 @@
     .menu a {
         color: #12437e;
     }
+
+    /* header 영역 반응형 : 1024px */
+    @media screen and (max-width:1024px) {
+        .header {
+            height: 6rem;
+        }
+
+        .logo {
+            width: 5rem;
+            height: 5rem;
+            margin-left: 6rem;
+        }
+
+        .menu {
+            margin-right: 6rem;
+            margin-left: 3rem;
+        }
+
+        .menu li {
+            font-size: 2rem;
+            transform: scale(1, 0.9);
+        }
+
+    }
 </style>

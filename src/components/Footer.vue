@@ -77,4 +77,41 @@
         letter-spacing: 0.05rem;
 
     }
+
+    /* footer 영역 반응형 : 1024px */
+    @media screen and (max-width:1024px) {
+    .footer {
+        height: 6rem;
+
+    }
+
+    .footer-left {
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-left p {
+        font-size: 1.2rem;
+    }
+
+    .footer-right {
+        position: relative;
+        display: flex;
+        width: 50%;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .footer-right span {
+        font-family: 'Playfair Display', serif;
+        font-weight: 500;
+        color: #675f65;
+        font-size: 1.2rem;
+        transform: scale(1, 0.9);
+        letter-spacing: 0.05rem;
+
+    }
+
+
+    }
 </style>
