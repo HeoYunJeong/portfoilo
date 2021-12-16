@@ -13,7 +13,7 @@
                             설명</span>하고자 합니다.<br><span>건설적인 대화</span>를 위해 작은 토론도 <span>목적</span>과
                         <span>목표</span>를
                         분명히 합니다.</p>
-                    <p>과대표, 평창올림픽 식음료팀 리더로서<span> 팀을 이끌어 보기도 하고</span><br>다양한 조직사회의
+                    <p>과대표, 평창올림픽 식음료팀 <span>리더</span>로서 팀을 이끌어 보기도 하고<br>다양한 조직사회의
                         <span>팔로워</span>를 경험
                         했습니다.
                         <br>이를 통해 <span>건강한 커뮤니케이션의 메커니즘</span>에 대하여 <br>깊이 고민하고 이해했습니다.</p>
@@ -38,17 +38,17 @@
                             </div>
                         </div>
                         <div class="personal-data__bottom">
-                        <div class="personal-data__education">
-                            <p class="personal-data__title">education</p>
-                            <p>항공서비스전공<span>정화예술대학교 관광학부</span></p>
-                            <p>PWA 제작 웹앱 프론트엔드 개발과정<span>(주)지아이티아카데미 대구</span></p>
-                        </div>
-                        <div class="personal-data__certificate">
-                            <p class="personal-data__title">certificate</p>
-                            <p>항공 예약 발권 사무원 3급</p>
-                            <p>바리스타 2급</p>
-                            <p>운전면허 2종 보통</p>
-                        </div>
+                            <div class="personal-data__education">
+                                <p class="personal-data__title">education</p>
+                                <p>항공서비스전공<span>정화예술대학교 관광학부</span></p>
+                                <p>PWA 제작 웹앱 프론트엔드 개발과정<span>(주)지아이티아카데미 대구</span></p>
+                            </div>
+                            <div class="personal-data__certificate">
+                                <p class="personal-data__title">certificate</p>
+                                <p>항공 예약 발권 사무원 3급</p>
+                                <p>바리스타 2급</p>
+                                <p>운전면허 2종 보통</p>
+                            </div>
                         </div>
                     </article>
                 </div>
@@ -306,7 +306,7 @@
 
         .about-left__intro {
             margin-bottom: 3rem;
-            width: 30rem;
+            width: 25rem;
             height: 3rem;
         }
 
@@ -359,7 +359,8 @@
         .personal-data {
             padding-top: 3rem;
             font-size: 1.2rem;
-            width: 85%;
+            word-break: keep-all;
+            width: 80%;
         }
 
         .personal-data>div {
@@ -373,12 +374,12 @@
         }
 
         .important {
-            width: 20rem;
+            width: 16rem;
         }
 
         .personal-data span {
             display: block;
-            font-size: 1.2rem;
+            font-size: 1.1rem;
         }
 
         .personal-data__bottom {
@@ -388,7 +389,7 @@
         }
 
         .personal-data__bottom div {
-            width: 20rem;
+            width: 16rem;
         }
 
         .about-right__right {
@@ -413,11 +414,40 @@
             line-height: 2rem;
             margin-top: 1.5rem;
             text-align: center;
-
+            word-break: keep-all;
         }
 
         .about-right__right img {
             display: none;
+        }
+    }
+
+    /* 어바웃 반응형 768px */
+
+    @media screen and (max-width: 768px) {
+
+        .about-left {
+            padding-right: 1rem;
+        }
+
+        .important {
+            width: 14rem;
+        }
+
+        .personal-data span {
+            display: block;
+            font-size: 1.1rem;
+        }
+
+        .personal-data__bottom {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .personal-data__bottom div {
+            width: 14rem;
+            padding-bottom: 1rem;
         }
     }
 </style>

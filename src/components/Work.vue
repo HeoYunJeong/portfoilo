@@ -206,7 +206,7 @@
         }
 
         .work-right__menu {
-            width: 85%;
+            width: 90%;
             margin-bottom: 3rem;
         }
 
@@ -222,7 +222,7 @@
         }
 
         .work-right__view {
-            width: 85%;
+            width: 90%;
             height: 40rem;
             border: 1px solid #12437e;
             border-radius: 3rem;

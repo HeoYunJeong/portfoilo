@@ -272,7 +272,7 @@
     }
 
         .skill-contents {
-        height: 25rem;
+        height: 30rem;
     }
 
     .skill-contents p {
