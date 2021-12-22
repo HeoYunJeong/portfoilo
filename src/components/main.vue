@@ -36,20 +36,13 @@
         flex-direction: column;
         justify-content: flex-end;
         width: 50%;
-        padding-right: 9rem;
-        margin-left: 6rem;
     }
-
-    .main-text {}
-
-    .main-text img {}
-
-
 
     .intro {
         position: relative;
         display: block;
         margin-top: 7rem;
+        padding-right: 6rem;
     }
 
     .intro p {
@@ -68,10 +61,9 @@
         position: relative;
         display: flex;
         flex-direction: column;
-        /* justify-content: center; */
+        justify-content: center;
         width: 50%;
-        height: 55rem;
-        margin-left: 6rem;
+        height: 50rem;
         font-size: 0;
         background: url('../assets/main-img.png') no-repeat center / contain;
     }
@@ -95,30 +87,51 @@
         }
 
         .intro {
-            position: relative;
-            display: block;
             margin-top: 6rem;
             margin-bottom: 8rem;
+            padding-right: 1rem;
         }
 
         .intro p {
-            text-align: right;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             line-height: 2.1rem;
-            letter-spacing: 0.001em;
-            transform: scale(1, 0.9);
-            text-decoration: underline;
-            text-underline-position: under;
-            color: #fff;
         }
 
         .main-right {
             width: 40%;
             margin-right: 6rem;
             margin-left: 0rem;
-            font-size: 0;
-            background: url('../assets/main-img.png') no-repeat center / contain;
+        }
+    }
+
+
+    /* main 반응형 425px */
+    @media screen and (max-width:425px) {
+
+        .main-left {
+            width: 100%;
+            margin-left: 0rem;
+            padding-left: 6rem;
+        }
+        .main-text {
+            width: 70%;
         }
 
+        .intro {
+            margin-top: 3rem;
+            margin-bottom: 0rem;
+            padding-right: 0rem;
+        }
+
+        .intro p {
+            text-align: left;
+        }
+
+        .main-right {
+            width: 100%;
+            height: 25rem;
+            margin-top: 6rem;
+            margin-right: 0rem;
+        }
     }
 </style>

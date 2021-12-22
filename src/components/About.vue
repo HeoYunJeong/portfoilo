@@ -450,4 +450,76 @@
             padding-bottom: 1rem;
         }
     }
+
+    /* 어바웃 반응형 425px */
+
+    @media screen and (max-width: 425px) {
+.about {
+    /* margin-top: 6rem;
+    padding-top: 6rem; */
+}
+
+        .about .container {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .about-left {
+            width: 100%;
+            margin-right: 0rem;
+            background: #12437e;
+            padding-bottom: 3rem;
+            padding-right: 0rem;
+        }
+
+        .about-left__content {
+            margin-left: 3rem;
+        }
+
+        .about-left__title {
+
+            margin-bottom: 2rem;
+        }
+
+        .about-left__title h4 {
+            padding-top: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .about-left__intro {
+            margin-left: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .about-left__content p {
+            line-height: 1.9;
+            margin-bottom: 3rem;
+        }
+
+
+            /* 어바웃 오른쪽 */
+        .about-right {
+            width: 100%;
+            margin: 3rem 0;
+        }
+
+        .personal-data {
+            font-size: 1.3rem;
+        }
+
+        .slogan-top {
+            border-top: 0.1rem solid #cdc3c8;
+            padding-top: 2rem;
+            width: 80%;
+            flex-direction: row;
+        }
+
+        .slogan-title {
+            text-align: right;
+        }
+
+        .slogan-content {
+            text-align: right;
+        }
+    }
 </style>

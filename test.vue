@@ -19,7 +19,7 @@
                         <router-link to="/contact">Contact</router-link>
                     </li>
                 </ul>
-                <div class="mb-menu">
+                <div class="sub-menu">
                     <button><i class="fas fa-bars"></i></button>
                 </div>
             </div>
@@ -29,12 +29,7 @@
 
 <script>
     export default {
-        name: 'header',
-        // data() {
-        //     return {
-        //         mbGnb: false,
-        //     }
-        // },
+        name: 'Header',
     }
 </script>
 
@@ -43,7 +38,7 @@
         position: relative;
         display: block;
         width: 100%;
-        height: 9rem;
+        height: 10rem;
         z-index: 10;
     }
 
@@ -56,23 +51,21 @@
 
     .logo {
         position: absolute;
-        left: 3rem;
-        transform: translateY(25%);
+        left: 4rem;
+        top: 50%;
+        transform: translateY(-50%);
         width: 6rem;
         height: 6rem;
         background: url('../assets/LOGO.png')no-repeat center;
         background-size: contain;
         font-size: 0;
-        transition: .5s;
-
     }
-
 
     .menu {
         position: absolute;
-        right: 3rem;
+        right: 4rem;
         top: 50%;
-        transform: translateY(75%);
+        transform: translateY(-50%);
         display: flex;
         justify-content: space-between;
         width: 50rem;
@@ -80,72 +73,59 @@
     }
 
     .menu li a {
-        font-weight: 700;
         font-size: 2.6rem;
-        transform: scale(1, 0.9);
         color: #12437e;
+        font-weight: 700;
         transition: .5s;
     }
 
-    .mb-menu {
+    .sub-menu {
         position: absolute;
-        right: 3rem;
+        right: 4rem;
         top: 50%;
-        transform: translateY(50%);
+        transform: translateY(-50%);
         display: none;
         width: 4rem;
         height: 4rem;
     }
 
-    .mb-menu i {
+    .sub-menu i {
         font-size: 4rem;
         color: #12437e;
         transition: .5s;
     }
 
-    /* header 영역 반응형 : 1024px */
+    /* header 영역 반응형 : 768px */
     @media screen and (max-width:1024px) {
-
-        .logo {
-            width: 5rem;
-            height: 5rem;
-        }
-
         .menu {
             width: 40rem;
         }
 
         .menu li a {
             font-size: 2rem;
-            transform: scale(1, 0.9);
         }
-
     }
 
+    /* header 영역 반응형 : 768px */
     @media screen and (max-width:768px) {
-
-        .menu {
-            width: 30rem;
-        }
-
-        .menu li a {
-            font-size: 1.5rem;
-            transform: scale(1, 0.9);
-        }
-
         .menu li {
             font-size: 1.8rem;
             font-weight: 700;
         }
-    }
-
-    @media screen and (max-width:425px) {
-        .header {
-            height: 6rem;
-        }
 
         .menu {
             display: none;
+        }
+
+        .sub-menu {
+            display: block;
+        }
+    }
+
+    /* header 영역 반응형 : 425px */
+    @media screen and (max-width:425px) {
+        .header {
+            height: 6rem;
         }
 
         .logo {
@@ -153,15 +133,14 @@
             height: 4rem;
         }
 
-        .mb-menu {
-            display: block;
+        .sub-menu {
             width: 3rem;
             height: 3rem;
         }
 
-        .mb-menu i {
+        .sub-menu i {
             font-size: 3rem;
-            color: #fff;
+            color: #FFF;
         }
     }
 </style>

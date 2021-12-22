@@ -210,6 +210,82 @@
             color: #12437e;
             text-align: center;
         }
+    }
+
+    /* contact 영역 반응형 : 768px */
+    @media screen and (max-width:768px) {
+
+        .title {
+            font-size: 1.6rem;
+        }
+
+        .messege {
+            font-size: 1.4rem;
+        }
+
+        .left-messege {
+            margin-bottom: 3rem;
+        }
+
+        .messege i {
+            font-size: 2.5rem;
+        }
+
+        .github-img i {
+            font-size: 20rem;
+        }
+
+        .github-img i:hover {
+            font-size: 25rem;
+        }
+
+        /* 컨택트 오른쪽 반응형 768 */
+
+        .qrcode__img {
+            width: 20rem;
+            height: 20rem;
+            background-size: 20rem;
+        }
+
+        .thank-messege {
+            font-size: 1.4rem;
+        }
+    }
+
+    /* contact 영역 반응형 : 425px */
+    @media screen and (max-width:425px) {
+        .contact-left {
+            width: 100%;
+        }
+
+        .left-messege {
+            margin-bottom: 3rem;
+        }
+
+        .messege i {
+            font-size: 2rem;
+        }
+
+        .github-img i {
+            font-size: 15rem;
+        }
+
+        /* 컨택트 오른쪽 반응형 425 */
+        .contact-right {
+            width: 100%;
+            margin-top: 6rem;
+        }
+
+        .qrcode__img {
+            width: 15rem;
+            height: 15rem;
+            background-size: 15rem;
+        }
+
+        .thank-messege {
+            font-size: 1.4rem;
+        }
+
 
     }
 </style>

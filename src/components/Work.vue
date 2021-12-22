@@ -7,8 +7,8 @@
             </article>
             <article class="work-right">
                 <div class="work-right__menu">
-                    <p @click="showPub" :class="{work_right_focus: pubShow==true}">퍼블리싱</p>
-                    <p @click="showDes" :class="{work_right_focus: designShow==true}">디자인</p>
+                    <span @click="showPub" :class="{work_right_focus: pubShow==true}">퍼블리싱</span>
+                    <span @click="showDes" :class="{work_right_focus: designShow==true}">디자인</span>
                 </div>
                 <div class="work-right__view">
                     <Publishing v-if="pubShow==true" />
@@ -56,7 +56,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     ::-webkit-scrollbar {
         width: 0px;
     }
@@ -109,10 +109,10 @@
         position: relative;
         display: flex;
         justify-content: center;
-        margin-bottom: 6rem;
+        margin-bottom: 3rem;
     }
 
-    .work-right__menu p {
+    .work-right__menu span {
         width: 15%;
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 400;
@@ -123,15 +123,11 @@
         cursor: pointer;
     }
 
-    .work-right__menu p:last-child {
+    .work-right__menu span:last-child {
         margin-right: 0rem;
     }
 
     .work_right_focus {
-        /* background: #12437e;
-        color: #fff !important;
-        border-radius: 0.5rem;
-        text-decoration: underline; */
         text-underline-position: under;
         text-decoration: solid underline rgba(18, 67, 126, 0.8) 0.5rem;
         transition: all 1s;
@@ -172,17 +168,6 @@
         border-radius: 5rem;
     }
 
-    /* .swiper .swiper-slide a {
-        position: relative;
-        display: block;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 500;
-        font-size: 1.8rem;
-        text-align: center;
-        padding-top: 10rem;
-        text-decoration: none;
-        color: #fff;
-    } */
 
     /* work 영역 반응형 : 1024px */
     @media screen and (max-width:1024px) {
@@ -210,12 +195,12 @@
             margin-bottom: 3rem;
         }
 
-        .work-right__menu p {
+        .work-right__menu span {
             font-size: 1.4rem;
             margin-right: 3rem;
         }
 
-        .work-right__menu p:last-child {
+        .work-right__menu span:last-child {
             margin-right: 0rem;
             font-size: 1.4rem;
 
@@ -230,6 +215,76 @@
             padding-top: 5rem;
             animation: shadow-pop-br 1s;
         }
+    }
 
+        /* work 반응형 768px */
+
+    @media screen and (max-width: 768px) {
+
+        .work-right__menu {
+            margin-top: 3rem;
+            width: 90%;
+            margin-bottom: 3rem;
+        }
+
+        .work-right__menu span {
+            width: 50%;
+            margin-right: 0;
+            font-size: 1.6rem;
+            color: #12437e;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .work-right__menu span:last-child {
+            margin-right: 0rem;
+            font-size: 1.6rem;
+        }
+
+        .work_right_focus {
+            margin: 0;
+        }
+
+}
+
+    /* work 반응형 425px */
+
+    @media screen and (max-width: 425px) {
+
+        .work-left {
+            width: 100%;
+            margin: 0rem;
+            background: #12437e;
+            padding-bottom: 3rem;
+        }
+
+        .work-left__title {
+            font-size: 1.5rem;
+        }
+
+        /* work 오른쪽 반응형 425px */
+        .work-right {
+            width: 100%;
+            height: 60rem;
+            align-items: center;
+            padding-bottom: 3rem;
+        }
+
+        .work-right__menu span {
+            width: 40%;
+            font-size: 1.8rem;
+            color: #12437e;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .work-right__menu span:last-child {
+            margin-right: 0rem;
+            font-size: 1.8rem;
+        }
+
+        .work-right__view {
+            height: 45rem;
+        }
     }
 </style>

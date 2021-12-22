@@ -271,18 +271,48 @@
         font-size: 4rem;
     }
 
-        .skill-contents {
+    .skill-contents {
         height: 30rem;
     }
 
     .skill-contents p {
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 100;
         line-height: 1.8;
         font-size: 1.4rem;
-        color: #fff;
-        word-break: keep-all;
+    }
     }
 
+    /* workleft 영역 반응형 : 1024px */
+    @media screen and (max-width:768px) {
+
+    .skill-img {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .skill-img i {
+        font-size: 3rem;
+    }
+    }
+
+    /* work-left 반응형 425px */
+
+    @media screen and (max-width: 425px) {
+    .skill-container,
+    .skill-contents {
+        position: relative;
+        display: block;
+        width: 80%;
+        padding: 2.5rem;
+    }
+
+    .skill-contents {
+        margin-bottom: 3rem;
+    }
+
+        .skill-contents p {
+        line-height: 1.8;
+        font-size: 1.6rem;
+    }
+    
     }
 </style>

@@ -5,20 +5,21 @@
       <Footer />
   </div>
 </template>
+
 <script>
   import Header from './components/Header.vue';
   import Footer from './components/Footer.vue';
+
   export default {
     name: 'App',
-    data() {
-      return {}
-    },
+
     components: {
       Header,
       Footer,
     }
   }
 </script>
+
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Playfair+Display:wght@400;500;600;700&display=swap');
 
@@ -55,6 +56,10 @@
     overflow-x: hidden;
   }
 
+  body {
+    font-family: 'Playfair Display', 'Noto Sans KR', sans-serif;
+  }
+
   .wrap {
      /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#13437e+0,13437e+50,ffffff+50,ffffff+100 */
     background: #13437e;
@@ -79,6 +84,7 @@
   .container {
     position: relative;
     display: flex;
+    justify-content: space-between;
     max-width: 144rem;
     width: 100%;
     margin: 0 auto;
@@ -106,5 +112,9 @@
       filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#13437e', endColorstr='#ffffff', GradientType=0);
       /* IE6-9 */
     }
+
+    .container {
+    flex-direction: column;
+  }
   }
 </style>
