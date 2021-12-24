@@ -5,8 +5,7 @@
                 <div class="about-left__title">
                     <h4>soft skill</h4>
                 </div>
-                <div class="about-left__intro">I’m a Positive Waves Surfer
-                </div>
+                <div class="about-left__intro">I’m a Positive Waves Surfer</div>
                 <article class="about-left__content">
                     <p>저는 상대의 감정을 헤아리는 <span>공감 능력</span>이 뛰어납니다.<br>상대방의 기술적 배경을 고려해
                         제 생각을 <span>조리 있게
@@ -72,7 +71,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .about {
         position: relative;
         display: block;
@@ -454,22 +453,13 @@
     /* 어바웃 반응형 425px */
 
     @media screen and (max-width: 425px) {
-.about {
-    /* margin-top: 6rem;
-    padding-top: 6rem; */
-}
 
-        .about .container {
-            display: flex;
-            justify-content: flex-start;
-        }
 
         .about-left {
             width: 100%;
             margin-right: 0rem;
             background: #12437e;
-            padding-bottom: 3rem;
-            padding-right: 0rem;
+            padding: 3rem 0;
         }
 
         .about-left__content {
@@ -497,10 +487,15 @@
         }
 
 
-            /* 어바웃 오른쪽 */
+        /* 어바웃 오른쪽 */
         .about-right {
             width: 100%;
-            margin: 3rem 0;
+            height: 100%;
+            padding-bottom: 3rem;
+        }
+
+        .about-right__left {
+            margin-top: 9rem;
         }
 
         .personal-data {
