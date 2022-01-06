@@ -1,8 +1,8 @@
 <template>
   <div class="wrap">
-      <Header />
-      <router-view></router-view>
-      <Footer />
+    <Header />
+    <router-view></router-view>
+    <Footer />
   </div>
 </template>
 
@@ -60,7 +60,7 @@
   }
 
   .wrap {
-     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#13437e+0,13437e+50,ffffff+50,ffffff+100 */
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#13437e+0,13437e+50,ffffff+50,ffffff+100 */
     background: #13437e;
     /* Old browsers */
     background: -moz-linear-gradient(left, #13437e 0%, #13437e 50%, #ffffff 50%, #ffffff 100%);
@@ -113,7 +113,7 @@
     }
 
     .container {
-    flex-direction: column;
-  }
+      flex-direction: column;
+    }
   }
 </style>

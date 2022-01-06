@@ -1,6 +1,6 @@
 <template>
     <swiper class="swiper" v-bind="swiperOptions" :modules="moudules">
-        <swiper-slide class="swiper-slide01">
+        <swiper-slide class="swiper-slide swiper-slide01">
             <div class="overlay">
                 <div class="overlay-contents">
                     <p class="overlay-contents__name">STX건설</p>
@@ -16,15 +16,15 @@
             </div>
             <a href="https://heoyunjeong.github.io/STXconst/" target="_blank"></a>
         </swiper-slide>
-        <swiper-slide class="swiper-slide02">
+        <swiper-slide class="swiper-slide swiper-slide02">
             <div class="overlay"></div>
             <a href="https://heoyunjeong.github.io/SONY/" target="_blank"></a>
         </swiper-slide>
-        <swiper-slide class="swiper-slide03">
+        <swiper-slide class="swiper-slide swiper-slide03">
             <div class="overlay"></div>
             <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank"></a>
         </swiper-slide>
-        <swiper-slide class="swiper-slide04">
+        <swiper-slide class="swiper-slide swiper-slide04">
             <div class="overlay"></div>
             <a href="https://heoyunjeong.github.io/inha-university/" target="_blank"></a>
         </swiper-slide>
@@ -67,7 +67,7 @@
                     centeredSlides: true,
                     loop: true,
                     autoplay: {
-                        "delay": 3000,
+                        "delay": 2000,
                         "disableOnInteraction": false
                     },
                     pagination: {
@@ -89,6 +89,10 @@
 </script>
 
 <style scoped>
+
+    .swiper .swiper-slide {
+        border-radius: 5rem;
+    }
     .swiper .swiper-slide01 {
         background: url('../assets/stx_img.jpg') no-repeat center;
         background-size: cover;

@@ -7,11 +7,11 @@
             </article>
             <article class="work-right">
                 <div class="work-right__menu">
-                    <span @click="showPub" :class="{work_right_focus: pubShow==true}">퍼블리싱</span>
-                    <span @click="showDes" :class="{work_right_focus: designShow==true}">디자인</span>
+                    <span @click="showPro" :class="{work_right_focus: projectsShow==true}">Projects</span>
+                    <span @click="showDes" :class="{work_right_focus: designShow==true}">Design</span>
                 </div>
                 <div class="work-right__view">
-                    <Publishing v-if="pubShow==true" />
+                    <Projects v-if="projectsShow==true" />
                     <Design v-if="designShow==true" />
                 </div>
             </article>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-    import Publishing from '../components/WorkPub.vue';
+    import Projects from './WorkProjects.vue';
     import Design from '../components/WorkDesign.vue';
     import WorkLeft from '../components/WorkLeft.vue';
 
@@ -29,27 +29,27 @@
         name: 'work',
         props: {},
         components: {
-            Publishing,
+            Projects,
             Design,
             WorkLeft,
         },
         data() {
             return {
-                pubShow: true,
+                projectsShow: true,
                 designShow: false,
             }
         },
         methods: {
-            showPub() {
-                if (this.pubShow == false) {
-                    this.pubShow = true
+            showPro() {
+                if (this.projectsShow == false) {
+                    this.projectsShow = true
                     this.designShow = false
                 }
             },
             showDes() {
                 if (this.designShow == false) {
                     this.designShow = true
-                    this.pubShow = false
+                    this.projectsShow = false
                 }
             },
         },
@@ -128,9 +128,33 @@
     }
 
     .work_right_focus {
-        text-underline-position: under;
-        text-decoration: solid underline rgba(18, 67, 126, 0.8) 0.5rem;
-        transition: all 1s;
+        position: relative;
+    }
+
+    .work_right_focus::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: -.5rem;
+        transform: translateX(-50%);
+        width: 70%;
+        height: .5rem;
+        background: rgba(18, 67, 126, 0.8);
+        animation: fadeIn .5s ease;
+    }
+
+    .work_right_focus:last-child:after {
+        width: 60%;
+    }
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
     }
 
     .work-right__view {
@@ -163,11 +187,9 @@
         padding-bottom: 6rem;
     }
 
-    .swiper .swiper-slide {
-        display: block;
-        border-radius: 5rem;
+    .swiper-container .swiper-button-prev {
+        color: pink;
     }
-
 
     /* work 영역 반응형 : 1024px */
     @media screen and (max-width:1024px) {

@@ -1,18 +1,18 @@
 <template>
     <swiper class="swiper" v-bind="swiperOptions" :modules="moudules">
-        <swiper-slide class="swiper-slide01">
+        <swiper-slide class="swiper-slide swiper-slide01">
             <div class="overlay"></div>
             <a href="https://heoyunjeong.github.io/STXconst/" target="_blank">하바나우냐냐</a>
         </swiper-slide>
-        <swiper-slide class="swiper-slide02">
+        <swiper-slide class="swiper-slide swiper-slide02">
             <div class="overlay"></div>
             <a href="https://heoyunjeong.github.io/SONY/" target="_blank">SONY 코리아</a>
         </swiper-slide>
-        <swiper-slide class="swiper-slide03">
+        <swiper-slide class="swiper-slide swiper-slide03">
             <div class="overlay"></div>
             <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">넥서스 플래그십</a>
         </swiper-slide>
-        <swiper-slide class="swiper-slide04">
+        <swiper-slide class="swiper-slide swiper-slide04">
             <div class="overlay"></div>
             <a href="https://heoyunjeong.github.io/inha-university/" target="_blank">인하대학교</a>
         </swiper-slide>
@@ -77,6 +77,10 @@
 </script>
 
 <style scoped>
+
+    .swiper .swiper-slide {
+        border-radius: 5rem;
+    }
     .swiper .swiper-slide01 {
         background: url('../assets/stx_img.jpg') no-repeat center;
         background-size: cover;
@@ -97,19 +101,4 @@
         background-size: cover;
     }
 
-    .overlay {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        display: block;
-        border-radius: 5rem;
-
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 0;
-        transition: all 0.1s;
-    }
-
-    .overlay:hover {
-        opacity: 1;
-    }
 </style>
