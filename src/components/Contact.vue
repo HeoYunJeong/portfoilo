@@ -32,7 +32,7 @@
     }
 </script>
 
-<style>
+<style scoped>
     .contact {
         position: relative;
         display: block;
@@ -267,6 +267,10 @@
         }
 
         .github-img i {
+            font-size: 15rem;
+        }
+
+        .github-img i:hover {
             font-size: 15rem;
         }
 

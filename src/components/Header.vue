@@ -26,24 +26,23 @@
                 </div>
             </div>
         </header>
-        <div class="black-bg" v-if="snbOpen == true">
-            <div class="mb-menu">
-                <button @click="snbOpen = false"><i class="fas fa-times close-btn"></i></button>
-                <ul class="snb">
-                    <li>
-                        <router-link to="/">Home</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/about">About</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/work">Works</router-link>
-                    </li>
-                    <li>
-                        <router-link to="/contact">Contact</router-link>
-                    </li>
-                </ul>
-            </div>
+        <div class="black-bg" :class="{black_bg: snbOpen == true}"  @click="snbOpen = false"></div>
+        <div class="mb-menu" :class="{mb_menu_open: snbOpen == true}">
+            <button @click="snbOpen = false"><i class="fas fa-times close-btn"></i></button>
+            <ul class="snb">
+                <li>
+                    <router-link to="/" @click="snbOpen = false">Home</router-link>
+                </li>
+                <li>
+                    <router-link to="/about" @click="snbOpen = false">About</router-link>
+                </li>
+                <li>
+                    <router-link to="/work" @click="snbOpen = false">Works</router-link>
+                </li>
+                <li>
+                    <router-link to="/contact" @click="snbOpen = false">Contact</router-link>
+                </li>
+            </ul>
         </div>
     </div>
 </template>
@@ -85,9 +84,7 @@
         background-size: contain;
         font-size: 0;
         transition: .5s;
-
     }
-
 
     .menu {
         position: absolute;
@@ -128,20 +125,41 @@
         position: fixed;
         left: 0;
         top: 0;
-        display: block;
+        display: none;
         width: 100vw;
         height: 100vh;
         background: rgba(0, 0, 0, 0.6);
-        z-index: 999;
+        z-index: 15;
+    }
+
+    .black_bg {
+        display: block !important;
     }
 
     .mb-menu {
         position: absolute;
         right: 0;
         top: 0;
+        display: none;
         width: 30rem;
         height: 100vh;
         background: #cdc3c8;
+        z-index: 20;
+    }
+
+    .mb_menu_open {
+        display: block;
+        animation: slideIn .5s ease;
+    }
+
+    @keyframes slideIn {
+        0% {
+            right: -30rem;
+        }
+
+        100% {
+            right: 0;
+        }
     }
 
     /* header 영역 반응형 : 1024px */
