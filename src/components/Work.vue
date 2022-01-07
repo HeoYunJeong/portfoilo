@@ -163,7 +163,7 @@
         border: 1px solid #12437e;
         border-radius: 3rem;
         box-shadow: 1.5rem 1.5rem rgba(18, 67, 126, 0.8);
-        padding-top: 5rem;
+        padding-top: 3rem;
         animation: shadow-pop-br 1s;
     }
 
