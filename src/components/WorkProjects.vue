@@ -2,38 +2,39 @@
     <swiper v-bind="swiperOptions" :modules="moudules">
         <swiper-slide>
             <div class="swiper-slide01">
-                <div class="overlay">
-                    <div class="overlay-contents">
-                        <p class="overlay-contents__name">STX건설</p>
-                        <p class="overlay-contents__lang">html css jquery</p>
-                        <p class="overlay-contents__time">2 weeks</p>
-                        <p class="overlay-contents__link">
-                            <a href="https://heoyunjeong.github.io/STXconst/" target="_blank"
-                                class="overlay-contents__clone"><i class="fab fa-github-square"></i></a>
-                            <a href="http://www.stxconst.co.kr/" target="_blank" class="overlay-contents__original"><i
-                                    class="fas fa-window-maximize"></i></a>
-                        </p>
-                    </div>
+                <!-- <div class="overlay"></div> -->
+                <div class="projects-img projects-img01">
+                    <a href="https://heoyunjeong.github.io/STXconst/" target="_blank"></a>
                 </div>
-                <a href="https://heoyunjeong.github.io/STXconst/" target="_blank"></a>
+                <div class="projects-contents">
+                    <p>STX 건설</p>
+                    <p>제작기간: 1 week</p>
+                    <p>사용언어: HTML5 / CSS3 / JQuery</p>
+                </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="swiper-slide02">
-                <div class="overlay"></div>
-                <a href="https://heoyunjeong.github.io/SONY/" target="_blank"></a>
+                <!-- <div class="overlay"></div> -->
+                <div class="projects-img projects-img02">
+                    <a href="https://heoyunjeong.github.io/SONY/" target="_blank"></a>
+                </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="swiper-slide03">
-                <div class="overlay"></div>
-                <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank"></a>
+                <!-- <div class="overlay"></div> -->
+                <div class="projects-img projects-img03">
+                    <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank"></a>
+                </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="swiper-slide04">
-                <div class="overlay"></div>
-                <a href="https://heoyunjeong.github.io/inha-university/" target="_blank"></a>
+                <!-- <div class="overlay"></div> -->
+                <div class="projects-img projects-img04">
+                    <a href="https://heoyunjeong.github.io/inha-university/" target="_blank"></a>
+                </div>
             </div>
         </swiper-slide>
     </swiper>
@@ -112,24 +113,29 @@
         height: 100%;
     }
 
-    .swiper-slide01 {
+    .projects-img {
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 50%;
+        background-size: cover !important;
+        border-radius: 3rem;
+    }
+
+    .projects-img01 {
         background: url('../assets/stx_img.jpg') no-repeat center;
-        background-size: cover;
     }
 
-    .swiper-slide02 {
+    .projects-img02 {
         background: url('../assets/sony_img.webp') no-repeat center;
-        background-size: cover;
     }
 
-    .swiper-slide03 {
+    .projects-img03 {
         background: url('../assets/nexus_img.jpg') no-repeat center;
-        background-size: cover;
     }
 
-    .swiper-slide04 {
+    .projects-img04 {
         background: url('../assets/inha_img.jpg') no-repeat center;
-        background-size: cover;
     }
 
     .overlay {
@@ -138,7 +144,7 @@
         height: 100%;
         display: block;
         border-radius: 5rem;
-        background: rgba(0, 0, 0, 0.5);
+        background: rgba(0, 0, 0, 0.7);
         opacity: 0;
         transition: all 0.2s;
         z-index: 9;
@@ -153,6 +159,7 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        text-align: center;
         font-size: 1.8rem;
         color: #fff;
     }

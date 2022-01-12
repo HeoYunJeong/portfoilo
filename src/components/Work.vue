@@ -7,12 +7,10 @@
             </article>
             <article class="work-right">
                 <div class="work-right__menu">
-                    <span @click="showPro" :class="{work_right_focus: projectsShow==true}">Projects</span>
-                    <span @click="showDes" :class="{work_right_focus: designShow==true}">Design</span>
+                    <span>Projects</span>
                 </div>
                 <div class="work-right__view">
-                    <Projects v-if="projectsShow==true" />
-                    <Design v-if="designShow==true" />
+                    <Projects />
                 </div>
             </article>
         </div>
@@ -21,7 +19,6 @@
 
 <script>
     import Projects from './WorkProjects.vue';
-    import Design from '../components/WorkDesign.vue';
     import WorkLeft from '../components/WorkLeft.vue';
 
 
@@ -30,29 +27,12 @@
         props: {},
         components: {
             Projects,
-            Design,
             WorkLeft,
         },
         data() {
-            return {
-                projectsShow: true,
-                designShow: false,
-            }
+
         },
-        methods: {
-            showPro() {
-                if (this.projectsShow == false) {
-                    this.projectsShow = true
-                    this.designShow = false
-                }
-            },
-            showDes() {
-                if (this.designShow == false) {
-                    this.designShow = true
-                    this.projectsShow = false
-                }
-            },
-        },
+        methods: {},
     }
 </script>
 
@@ -112,56 +92,47 @@
     }
 
     .work-right__menu span {
+        position: relative;
         width: 15%;
-        font-family: 'Playfair Display', serif;
-        transform: scale(1, 0.9);
-        font-weight: 600;
+        letter-spacing: .1rem;
+        font-weight: 500;
         font-size: 1.8rem;
         color: #12437e;
         text-align: center;
-        margin-right: 9rem;
         cursor: pointer;
     }
 
-    .work-right__menu span:last-child {
-        margin-right: 0rem;
-    }
-
-    .work_right_focus {
-        position: relative;
-    }
-
-    .work_right_focus::after {
+    .work-right__menu span::after {
         content: '';
+        display: block;
         position: absolute;
         left: 50%;
-        bottom: -.5rem;
+        bottom: -.8rem;
         transform: translateX(-50%);
-        width: 70%;
+        width: 80%;
         height: .5rem;
         background: rgba(18, 67, 126, 0.8);
-        animation: fadeIn .5s ease;
+        animation: to-right-slide 1s;
     }
 
-    .work_right_focus:last-child:after {
-        width: 60%;
-    }
-
-    @keyframes fadeIn {
+    @keyframes to-right-slide {
         0% {
-            opacity: 0;
+            width: 0%;
+            left: 10%;
         }
 
         100% {
-            opacity: 1;
+            width: 80%;
+            left: 50%;
         }
+
     }
 
     .work-right__view {
         width: 100%;
         height: 55rem;
         border: 1px solid #12437e;
-        border-radius: 3rem;
+        border-radius: 5rem;
         box-shadow: 1.5rem 1.5rem rgba(18, 67, 126, 0.8);
         padding-top: 3rem;
         animation: shadow-pop-br 1s;
@@ -179,17 +150,6 @@
         }
     }
 
-    .swiper {
-        position: relative;
-        display: block;
-        width: 100%;
-        height: 100%;
-        padding-bottom: 6rem;
-    }
-
-    .swiper-container .swiper-button-prev {
-        color: pink;
-    }
 
     /* work 영역 반응형 : 1024px */
     @media screen and (max-width:1024px) {
@@ -214,18 +174,10 @@
 
         .work-right__menu {
             width: 90%;
-            margin-bottom: 3rem;
         }
 
         .work-right__menu span {
             font-size: 1.4rem;
-            margin-right: 3rem;
-        }
-
-        .work-right__menu span:last-child {
-            margin-right: 0rem;
-            font-size: 1.4rem;
-
         }
 
         .work-right__view {
@@ -239,7 +191,7 @@
         }
     }
 
-        /* work 반응형 768px */
+    /* work 반응형 768px */
 
     @media screen and (max-width: 768px) {
 
@@ -258,16 +210,7 @@
             cursor: pointer;
         }
 
-        .work-right__menu span:last-child {
-            margin-right: 0rem;
-            font-size: 1.6rem;
-        }
-
-        .work_right_focus {
-            margin: 0;
-        }
-
-}
+    }
 
     /* work 반응형 425px */
 
@@ -300,10 +243,6 @@
             cursor: pointer;
         }
 
-        .work-right__menu span:last-child {
-            margin-right: 0rem;
-            font-size: 1.8rem;
-        }
 
         .work-right__view {
             height: 45rem;
