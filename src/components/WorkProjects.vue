@@ -101,8 +101,9 @@
 <style scoped>
     .swiper-container {
         width: 100%;
-        height: 100%;
-        padding-bottom: 3rem;
+        height: 95%;
+        padding-top: 2rem;
+        padding-bottom: 4rem;
     }
 
     .swiper-slide>div {
@@ -154,5 +155,9 @@
         justify-content: center;
         font-size: 1.8rem;
         color: #fff;
+    }
+
+    .swiper-pagination {
+        bottom: 0;
     }
 </style>

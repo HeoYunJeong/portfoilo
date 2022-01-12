@@ -83,7 +83,6 @@
     /* Hard skill word */
 
     .work-left__title {
-        font-family: 'Playfair Display', serif;
         font-weight: 400;
         font-size: 1.8rem;
         text-align: center;
@@ -114,8 +113,9 @@
 
     .work-right__menu span {
         width: 15%;
-        font-family: 'Noto Sans KR', sans-serif;
-        font-weight: 400;
+        font-family: 'Playfair Display', serif;
+        transform: scale(1, 0.9);
+        font-weight: 600;
         font-size: 1.8rem;
         color: #12437e;
         text-align: center;
