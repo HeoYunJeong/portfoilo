@@ -1,5 +1,4 @@
 <template>
-    <article class="skill">
         <div class="skill-container">
             <div class="skill-container__top">
                 <div class="skill-img" @mouseenter="step = 0"><i class="fab fa-html5 fa-6x"
@@ -95,7 +94,6 @@
                 </div>
             </transition-group>
         </div>
-    </article>
 </template>
 
 <script>
@@ -112,20 +110,13 @@
 <style scoped>
     /* 스킬 박스 */
 
-    .skill {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-    }
-
     .skill-container,
     .skill-contents {
         position: relative;
         display: block;
-        width: 80%;
-        padding: 2.5rem;
+        margin: 0 auto;
+        width: 60%;
+        padding: 3rem;
         border: 1px solid rgba(255, 255, 255, 0.7);
         border-radius: 3rem;
         box-shadow: 1.5rem 1.5rem rgba(255, 255, 255, 0.7);
@@ -166,8 +157,8 @@
     }
 
     .skill-img {
-        width: 6rem;
-        height: 6rem;
+        width: 4rem;
+        height: 4rem;
         cursor: pointer;
         text-align: center;
     }
@@ -177,7 +168,7 @@
         display: block;
         width: 100%;
         height: 100%;
-        font-size: 6rem;
+        font-size: 4rem;
         color: rgba(255, 255, 255, 0.3);
     }
 
@@ -223,8 +214,9 @@
     .skill-separation {
         position: relative;
         display: block;
+        margin: 0 auto;
         background: rgba(255, 255, 255, 0.1);
-        width: 80%;
+        width: 65%;
         height: 0.5rem;
         margin-top: 5.5rem;
         border-radius: 0.5rem;
@@ -233,7 +225,7 @@
     /* 스킬 설명 */
 
     .skill-contents {
-        height: 30rem;
+        height: 21rem;
         margin-top: 4rem;
 
     }
@@ -242,7 +234,7 @@
         font-family: 'Noto Sans KR', sans-serif;
         font-weight: 100;
         line-height: 1.6;
-        font-size: 2rem;
+        font-size: 1.6rem;
         color: #fff;
         word-break: keep-all;
     }

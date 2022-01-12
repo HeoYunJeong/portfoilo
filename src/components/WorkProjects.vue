@@ -1,5 +1,6 @@
 <template>
-    <swiper v-bind="swiperOptions" :modules="moudules">
+    <swiper v-bind="swiperOptions" :modules="moudules" @swiper="onSwiper"
+          @mouseenter="() => this.swiper.autoplay.stop()" @mouseleave="() => this.swiper.autoplay.start()">
         <swiper-slide>
             <div class="swiper-slide01">
                 <!-- <div class="overlay"></div> -->
@@ -60,9 +61,9 @@
             SwiperSlide
         },
         methods: {
-            // onSwiper(swiper) {
-            //     this.swiper = swiper;
-            // },
+            onSwiper(swiper) {
+                this.swiper = swiper;
+            },
 
             // handleSlideTo() {
             //     this.swiper.slideTo(3);

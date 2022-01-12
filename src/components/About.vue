@@ -2,25 +2,36 @@
     <section class="about">
         <div class="container">
             <div class="about-left">
-                <div class="about-left__title">
-                    <h4>soft skill</h4>
-                </div>
-                <div class="about-left__intro">I’m a Positive Waves Surfer</div>
-                <article class="about-left__content">
-                    <p>저는 상대의 감정을 헤아리는 <span>공감 능력</span>이 뛰어납니다.<br>상대방의 기술적 배경을 고려해
-                        제 생각을 <span>조리 있게
-                            설명</span>하고자 합니다.<br><span>건설적인 대화</span>를 위해 작은 토론도 <span>목적</span>과
-                        <span>목표</span>를
-                        분명히 합니다.</p>
-                    <p>과대표, 평창올림픽 식음료팀 <span>리더</span>로서 팀을 이끌어 보기도 하고<br>다양한 조직사회의
-                        <span>팔로워</span>를 경험
-                        했습니다.
-                        <br>이를 통해 <span>건강한 커뮤니케이션의 메커니즘</span>에 대하여 <br>깊이 고민하고 이해했습니다.</p>
-                    <p><span>소통의 주춧돌</span>은 <span>긍정과 존중</span>이라고 생각합니다.<br>이를
-                        바탕으로한 <span>이해</span>로 <span>생산적인 소통</span>을 <span>시작</span>합니다. <br>앞선 통찰을
-                        토대로
-                        다른 직군과 원활히 협업하고 <br><span>함께 일하고 싶은 동료</span>가 되겠습니다.</p>
-                </article>
+                <swiper v-bind="swiperOptions" :modules="moudules" @swiper="onSwiper"
+          @mouseenter="() => this.swiper.autoplay.stop()" @mouseleave="() => this.swiper.autoplay.start()">
+                    <swiper-slide>
+                        <div class="about-left__title">
+                            <h4>soft skill</h4>
+                        </div>
+                        <div class="about-left__intro">I’m a Positive Waves Surfer</div>
+                        <article class="about-left__content">
+                            <p>저는 상대의 감정을 헤아리는 <span>공감 능력</span>이 뛰어납니다.<br>상대방의 기술적 배경을 고려해
+                                제 생각을 <span>조리 있게
+                                    설명</span>하고자 합니다.<br><span>건설적인 대화</span>를 위해 작은 토론도 <span>목적</span>과
+                                <span>목표</span>를
+                                분명히 합니다.</p>
+                            <p>과대표, 평창올림픽 식음료팀 <span>리더</span>로서 팀을 이끌어 보기도 하고<br>다양한 조직사회의
+                                <span>팔로워</span>를 경험
+                                했습니다.
+                                <br>이를 통해 <span>건강한 커뮤니케이션의 메커니즘</span>에 대하여 <br>깊이 고민하고 이해했습니다.</p>
+                            <p><span>소통의 주춧돌</span>은 <span>긍정과 존중</span>이라고 생각합니다.<br>이를
+                                바탕으로한 <span>이해</span>로 <span>생산적인 소통</span>을 <span>시작</span>합니다. <br>앞선 통찰을
+                                토대로
+                                다른 직군과 원활히 협업하고 <br><span>함께 일하고 싶은 동료</span>가 되겠습니다.</p>
+                        </article>
+                    </swiper-slide>
+                    <swiper-slide>
+                        <div class="about-left__title">
+                            <h4>hard skill</h4>
+                        </div>
+                        <WorkLeft />
+                    </swiper-slide>
+                </swiper>
             </div>
             <div class="about-right">
                 <div class="about-right__left">
@@ -66,8 +77,54 @@
 </template>
 
 <script>
+    import WorkLeft from '../components/WorkLeft.vue';
+    import SwiperCore, {
+        Autoplay,
+        Pagination,
+        Navigation
+    } from 'swiper';
+    import {
+        Swiper,
+        SwiperSlide
+    } from 'swiper/vue';
+    import 'swiper/swiper-bundle.min.css';
+    import 'swiper/components/navigation/navigation.min.css'
+    import 'swiper/components/pagination/pagination.min.css'
+    SwiperCore.use([Pagination, Navigation, Autoplay]);
     export default {
-        name: 'about',
+        components: {
+            Swiper,
+            SwiperSlide,
+            WorkLeft
+        },
+        methods: {
+            onSwiper(swiper) {
+                this.swiper = swiper;
+            },
+
+            // handleSlideTo() {
+            //     this.swiper.slideTo(3);
+            // },
+        },
+        setup() {
+            return {
+                swiperOptions: {
+                    slidesPerView: 1,
+                    centeredSlides: true,
+                    loop: true,
+                    speed: 1200,
+                    autoplay: {
+                        "delay": 3000,
+                        "disableOnInteraction": false
+                    },
+                    pagination: {
+                        "clickable": true
+                    },
+                    navigation: true
+                },
+                modules: [Navigation, Pagination, Autoplay],
+            };
+        },
     }
 </script>
 
@@ -83,8 +140,8 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
         width: 50%;
-        margin-right: 8rem;
         animation: slide-right 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     }
 
@@ -98,11 +155,23 @@
         }
     }
 
+    .swiper-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    .swiper-slide {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
     .about-left__title {
         position: relative;
         display: block;
-        margin: 0 auto;
-        margin-bottom: 6rem;
+        text-align: center;
+        margin-bottom: 5rem;
     }
 
     .about-left__title h4 {
@@ -117,10 +186,10 @@
     .about-left__intro {
         position: relative;
         display: block;
-        height: 10%;
+        height: 2.5rem;
         font-size: 0;
         background: url("../assets/about-text.png")no-repeat left / contain;
-        margin-bottom: 6rem;
+        margin-bottom: 4rem;
         margin-left: 6rem;
 
     }
