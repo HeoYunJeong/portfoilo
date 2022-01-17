@@ -3,7 +3,7 @@
         <div class="container">
             <div class="about-left">
                 <swiper v-bind="swiperOptions" :modules="moudules" @swiper="onSwiper"
-          @mouseenter="() => this.swiper.autoplay.stop()" @mouseleave="() => this.swiper.autoplay.start()">
+                    @mouseenter="() => this.swiper.autoplay.stop()" @mouseleave="() => this.swiper.autoplay.start()">
                     <swiper-slide>
                         <div class="about-left__title">
                             <h4>soft skill</h4>
@@ -114,7 +114,7 @@
                     loop: true,
                     speed: 1200,
                     autoplay: {
-                        "delay": 3000,
+                        "delay": 4000,
                         "disableOnInteraction": false
                     },
                     pagination: {
@@ -159,6 +159,7 @@
         position: relative;
         height: 100%;
         width: 100%;
+        padding-bottom: 5rem;
     }
 
     .swiper-slide {
@@ -219,13 +220,19 @@
         font-weight: 500;
     }
 
+    .swiper-pagination-bullet-active {
+        background: #fff !important;
+    }
+
+
+    /* 어바웃 오른쪽 */
 
 
     .about-right {
         position: relative;
         display: flex;
         width: 50%;
-        margin-left: 9rem;
+        margin-left: 8.6rem;
         overflow: hidden;
     }
 
@@ -585,5 +592,9 @@
         .slogan-content {
             text-align: right;
         }
+    }
+
+    .swiper-pagination > .swiper-pagination-bullet-active {
+        background: #fff !important;
     }
 </style>

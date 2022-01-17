@@ -57,13 +57,13 @@
             <transition-group name="fade">
 
                 <div v-if="step == 0">
-                    <p><strong>HTML5</strong><br>웹 표준, 웹 접근성, Cross Browsing, Semantic Markup 규격에 대해 깊이
+                    <p><strong>HTML5</strong><br>웹 표준, 웹 접근성, Cross Browsing , Semantic Markup 규격에 대해 깊이
                         이해하고 있습니다. 디자인 구성
                         요소들이 어떤 의미를 가지고 어떻게 쓰이는지 해석하고 구조화할 수 있습니다.</p>
                 </div>
                 <div v-if="step == 1">
                     <p><strong>CSS3</strong><br>Cascading의 원리를 이해하고 있으며, 미디어 쿼리를 통한 반응형 웹 제작이 가능합니다. 확장성,
-                        재활용성을 고려한 css 설계를 지향합니다. 부트스트랩과 같은 라이브러리를 활용하여 개발 시간과 코드 길이를 효율적으로 단축할 수 있습니다.
+                        재활용성을 고려한 css 설계를 지향합니다. Bootstrap 을 활용하여 개발 시간과 코드 길이를 효율적으로 단축할 수 있습니다.
                     </p>
                 </div>
                 <div v-if="step == 2">
@@ -225,7 +225,7 @@
     /* 스킬 설명 */
 
     .skill-contents {
-        height: 21rem;
+        height: 23rem;
         margin-top: 4rem;
 
     }
@@ -235,6 +235,7 @@
         font-weight: 100;
         line-height: 1.6;
         font-size: 1.6rem;
+        letter-spacing: .1rem;
         color: #fff;
         word-break: keep-all;
     }

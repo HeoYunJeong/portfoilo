@@ -1,14 +1,8 @@
 <template>
     <section class="work">
         <div class="container">
-            <article class="work-left">
-                <h4 class="work-left__title">hard skill</h4>
-                <WorkLeft />
-            </article>
             <article class="work-right">
-                <div class="work-right__menu">
-                    <span>Projects</span>
-                </div>
+                <p class="work-right__menu">Projects</p>
                 <div class="work-right__view">
                     <Projects />
                 </div>
@@ -19,7 +13,7 @@
 
 <script>
     import Projects from './WorkProjects.vue';
-    import WorkLeft from '../components/WorkLeft.vue';
+    // import WorkLeft from '../components/WorkLeft.vue';
 
 
     export default {
@@ -27,7 +21,7 @@
         props: {},
         components: {
             Projects,
-            WorkLeft,
+            // WorkLeft,
         },
         data() {
 
@@ -48,28 +42,11 @@
     }
 
     .work .container {
-        justify-content: space-between;
-    }
-
-    .work-left {
-        position: relative;
         display: flex;
         flex-direction: column;
-        width: 40%;
-        margin-left: 6rem;
-        margin-right: 6rem;
-    }
-
-    /* Hard skill word */
-
-    .work-left__title {
-        font-weight: 400;
-        font-size: 1.8rem;
-        text-align: center;
-        margin-bottom: 3rem;
-        transform: scale(1, 0.9);
-        color: #fff;
-        text-transform: uppercase;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
     }
 
     /* work 오른쪽 */
@@ -78,51 +55,50 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        width: 45%;
+        width: 70%;
         height: 65rem;
-        margin-left: 6rem;
     }
 
 
     .work-right__menu {
         position: relative;
-        display: flex;
-        justify-content: center;
+        width: 15rem;
+        height: 3.5rem;
+        margin: 0 auto;
         margin-bottom: 3rem;
-    }
-
-    .work-right__menu span {
-        position: relative;
-        width: 15%;
         letter-spacing: .1rem;
-        font-weight: 500;
-        font-size: 1.8rem;
-        color: #12437e;
+        font-weight: 700;
+        font-size: 1.6rem;
         text-align: center;
-        cursor: pointer;
+        color: #12437e;
+        text-transform: uppercase;
+        border: 1px solid #42303e;
+        border-radius: 1rem;
+        background: rgba(205, 195, 200, 1);
     }
 
-    .work-right__menu span::after {
+    .work-right__menu::after {
         content: '';
         display: block;
         position: absolute;
         left: 50%;
-        bottom: -.8rem;
+        bottom: -1.2rem;
         transform: translateX(-50%);
-        width: 80%;
-        height: .5rem;
-        background: rgba(18, 67, 126, 0.8);
+        width: 90%;
+        height: .7rem;
+        background: #cdc3c8;
+        opacity: 0.7;
         animation: to-right-slide 1s;
     }
 
     @keyframes to-right-slide {
         0% {
             width: 0%;
-            left: 10%;
+            left: 5%;
         }
 
         100% {
-            width: 80%;
+            width: 90%;
             left: 50%;
         }
 
@@ -131,21 +107,22 @@
     .work-right__view {
         width: 100%;
         height: 55rem;
-        border: 1px solid #12437e;
+        border: 1px solid #cdc3c8;
         border-radius: 5rem;
-        box-shadow: 1.5rem 1.5rem rgba(18, 67, 126, 0.8);
+        box-shadow: 1.5rem 1.5rem rgba(205, 195, 200, 0.9);
         padding-top: 3rem;
+        background: #fff;
         animation: shadow-pop-br 1s;
     }
 
     @keyframes shadow-pop-br {
         0% {
-            box-shadow: 0 0 rgba(18, 67, 126, 0.3);
+            box-shadow: 0 0 rgba(205, 195, 200, 0.3);
             opacity: 0;
         }
 
         100% {
-            box-shadow: 15px 15px rgba(18, 67, 126, 0.8);
+            box-shadow: 15px 15px rgba(205, 195, 200, 0.9);
             opacity: 1;
         }
     }
@@ -154,16 +131,6 @@
     /* work 영역 반응형 : 1024px */
     @media screen and (max-width:1024px) {
 
-        .work-left {
-            margin-right: 0rem;
-            justify-content: center;
-        }
-
-        .work-left__title {
-            font-size: 1.6rem;
-        }
-
-        /* work 오른쪽 반응형 1024 */
         .work-right {
             width: 45%;
             height: 50rem;
@@ -216,18 +183,6 @@
 
     @media screen and (max-width: 425px) {
 
-        .work-left {
-            width: 100%;
-            margin: 0rem;
-            background: #12437e;
-            padding-bottom: 3rem;
-        }
-
-        .work-left__title {
-            font-size: 1.5rem;
-        }
-
-        /* work 오른쪽 반응형 425px */
         .work-right {
             width: 100%;
             height: 60rem;

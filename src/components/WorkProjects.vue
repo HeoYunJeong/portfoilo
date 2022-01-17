@@ -1,40 +1,61 @@
 <template>
     <swiper v-bind="swiperOptions" :modules="moudules" @swiper="onSwiper"
-          @mouseenter="() => this.swiper.autoplay.stop()" @mouseleave="() => this.swiper.autoplay.start()">
+        @mouseenter="() => this.swiper.autoplay.stop()" @mouseleave="() => this.swiper.autoplay.start()">
         <swiper-slide>
             <div class="swiper-slide01">
-                <!-- <div class="overlay"></div> -->
-                <div class="projects-img projects-img01">
-                    <a href="https://heoyunjeong.github.io/STXconst/" target="_blank"></a>
+
+                <div class="overlay">
+                    <div class="overlay-original"><i class="fab fa-chrome"></i><p>original page</p></div>
+                    <div class="overlay-clone"><i class="fas fa-clone"></i><p>clone coding</p></div>
+                    <div class="overlay-github"><i class="fab fa-github"></i><p>github Source</p></div>
                 </div>
+
+                <a href="https://heoyunjeong.github.io/STXconst/" target="_blank">
+                    <div class="projects-img projects-img01"></div>
+                </a>
                 <div class="projects-contents">
-                    <p>STX 건설</p>
-                    <p>제작기간: 1 week</p>
-                    <p>사용언어: HTML5 / CSS3 / JQuery</p>
+                    <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;stx 건설</p>
+                    <p class="projects-contents__time">제작기간: 1 week</p>
+                    <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="swiper-slide02">
                 <!-- <div class="overlay"></div> -->
-                <div class="projects-img projects-img02">
-                    <a href="https://heoyunjeong.github.io/SONY/" target="_blank"></a>
+                <a href="https://heoyunjeong.github.io/SONY/" target="_blank">
+                    <div class="projects-img projects-img02"></div>
+                </a>
+                <div class="projects-contents">
+                    <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;sony korea</p>
+                    <p class="projects-contents__time">제작기간: 1 week</p>
+                    <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="swiper-slide03">
                 <!-- <div class="overlay"></div> -->
-                <div class="projects-img projects-img03">
-                    <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank"></a>
+                <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">
+                    <div class="projects-img projects-img03"></div>
+                </a>
+                <div class="projects-contents">
+                    <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;NEXUS</p>
+                    <p class="projects-contents__time">제작기간: 2 weeks</p>
+                    <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide>
             <div class="swiper-slide04">
                 <!-- <div class="overlay"></div> -->
-                <div class="projects-img projects-img04">
-                    <a href="https://heoyunjeong.github.io/inha-university/" target="_blank"></a>
+                <a href="https://heoyunjeong.github.io/inha-university/" target="_blank">
+                    <div class="projects-img projects-img04"></div>
+                </a>
+                <div class="projects-contents">
+                    <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;인하대학교</p>
+                    <p class="projects-contents__time">제작기간: 3 weeks</p>
+                    <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
             </div>
         </swiper-slide>
@@ -73,7 +94,7 @@
             return {
                 swiperOptions: {
                     slidesPerView: 1,
-                    spaceBetween: 15,
+                    spaceBetween: 30,
                     centeredSlides: true,
                     loop: true,
                     // observer: true,
@@ -120,6 +141,7 @@
         width: 100%;
         height: 50%;
         background-size: cover !important;
+        border: .1rem solid #cdc3c8;
         border-radius: 3rem;
     }
 
@@ -143,29 +165,63 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        display: block;
-        border-radius: 5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 3rem;
         background: rgba(0, 0, 0, 0.7);
         opacity: 0;
         transition: all 0.2s;
         z-index: 9;
+        color: #fff;
+    }
+
+    .overlay-original,
+    .overlay-clone,
+    .overlay-github,
+    .projects-contents__name,
+    .projects-contents__time,
+    .projects-contents__lang {
+        font-family: 'Noto Sans KR', sans-serif;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2.2rem;
+        color: #fff;
+        text-align: center;
+        text-transform: capitalize;
+    }
+
+    .overlay-clone,
+    .overlay-github{
+        padding-top: 1rem;
     }
 
     .overlay:hover {
         opacity: 1;
     }
 
-    .overlay-contents {
+    .projects-contents {
         position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        font-size: 1.8rem;
-        color: #fff;
+        margin-top: 5rem;
+        width: 60%;
+        left: 3rem;
     }
 
-    .swiper-pagination {
-        bottom: 0;
+    .projects-contents__name,
+    .projects-contents__time,
+    .projects-contents__lang {
+        color: #12437e;
+        text-transform: uppercase;
+        text-align: left;
+    }
+
+    .projects-contents__time,
+    .projects-contents__lang {
+        margin-top: 1rem;
+        font-weight: 300;
+        font-size: 1.8rem;
+        text-transform: none;
+        color: #675f65;
     }
 </style>
