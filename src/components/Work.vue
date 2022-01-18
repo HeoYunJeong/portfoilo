@@ -67,6 +67,7 @@
         margin: 0 auto;
         margin-bottom: 3rem;
         letter-spacing: .1rem;
+        line-height: 1.8;
         font-weight: 700;
         font-size: 1.6rem;
         text-align: center;

@@ -255,31 +255,39 @@
         display: block;
         width: 100%;
         height: 50%;
-        background-size: cover !important;
+        /* background-size: cover !important; */
         border: .1rem solid #cdc3c8;
         border-radius: 3rem;
     }
 
     .projects-img01 {
-        background: url('../assets/main-text-copy.png') no-repeat;
-        background-size: 3rem 1rem;
+        background: #12437e url('../assets/main-text.png') no-repeat;
+        background-size: contain;
+
     }
 
     .projects-img02 {
-        background: url('../assets/stx_img.jpg') no-repeat center;
+        background: url('../assets/stx_img.jpg') no-repeat;
+        background-size: cover;
+
     }
 
     .projects-img03 {
         background: url('../assets/sony_img.webp') no-repeat;
+        background-size: cover;
 
     }
 
     .projects-img04 {
-        background: url('../assets/nexus_img.jpg') no-repeat center;
+        background: url('../assets/nexus_img.jpg') no-repeat;
+        background-size: cover;
+
     }
 
     .projects-img05 {
         background: url('../assets/inha_img.jpg') no-repeat;
+        background-size: cover;
+
 
     }
 
