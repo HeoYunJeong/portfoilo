@@ -1,17 +1,63 @@
 <template>
     <swiper v-bind="swiperOptions" :modules="moudules" @swiper="onSwiper"
         @mouseenter="() => this.swiper.autoplay.stop()" @mouseleave="() => this.swiper.autoplay.start()">
+
         <swiper-slide>
             <div class="swiper-slide01">
 
                 <div class="overlay">
-                    <div class="overlay-original"><i class="fab fa-chrome"></i><p>original page</p></div>
-                    <div class="overlay-clone"><i class="fas fa-clone"></i><p>clone coding</p></div>
-                    <div class="overlay-github"><i class="fab fa-github"></i><p>github Source</p></div>
+                    <div class="overlay-original">
+                        <a href="https://heoyunjeong.github.io/" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                            <span>original page</span>
+                        </a>
+                    </div>
+
+                    <div class="overlay-github overlay-github01">
+                        <a href="https://github.com/HeoYunJeong/portfolio" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>github Source</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="https://heoyunjeong.github.io/" target="_blank">
+                    <div class="projects-img projects-img01"></div>
+                </a>
+                <div class="projects-contents">
+                    <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;yunjeong's portfolio</p>
+                    <p class="projects-contents__time">제작기간: 4 weeks</p>
+                    <p class="projects-contents__lang">사용언어: Vue.js / HTML5 / CSS3 </p>
+                </div>
+            </div>
+        </swiper-slide>
+
+        <swiper-slide>
+            <div class="swiper-slide02">
+
+                <div class="overlay">
+                    <div class="overlay-original">
+                        <a href="http://www.stxconst.co.kr/" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                            <span>original page</span>
+                        </a>
+                    </div>
+                    <div class="overlay-clone">
+                        <a href="https://heoyunjeong.github.io/STXconst/" target="_blank">
+                            <i class="fas fa-clone"></i>
+                            <span>clone page</span>
+                        </a>
+                    </div>
+                    <div class="overlay-github">
+                        <a href="https://github.com/HeoYunJeong/STXconst" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>github Source</span>
+                        </a>
+                    </div>
                 </div>
 
                 <a href="https://heoyunjeong.github.io/STXconst/" target="_blank">
-                    <div class="projects-img projects-img01"></div>
+                    <div class="projects-img projects-img02"></div>
                 </a>
                 <div class="projects-contents">
                     <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;stx 건설</p>
@@ -21,10 +67,31 @@
             </div>
         </swiper-slide>
         <swiper-slide>
-            <div class="swiper-slide02">
-                <!-- <div class="overlay"></div> -->
+            <div class="swiper-slide03">
+
+                <div class="overlay">
+                    <div class="overlay-original">
+                        <a href="https://www.sony.co.kr/" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                            <span>original page</span>
+                        </a>
+                    </div>
+                    <div class="overlay-clone">
+                        <a href="https://heoyunjeong.github.io/SONY/" target="_blank">
+                            <i class="fas fa-clone"></i>
+                            <span>clone page</span>
+                        </a>
+                    </div>
+                    <div class="overlay-github">
+                        <a href="https://github.com/HeoYunJeong/SONY" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>github Source</span>
+                        </a>
+                    </div>
+                </div>
+
                 <a href="https://heoyunjeong.github.io/SONY/" target="_blank">
-                    <div class="projects-img projects-img02"></div>
+                    <div class="projects-img projects-img03"></div>
                 </a>
                 <div class="projects-contents">
                     <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;sony korea</p>
@@ -34,10 +101,33 @@
             </div>
         </swiper-slide>
         <swiper-slide>
-            <div class="swiper-slide03">
-                <!-- <div class="overlay"></div> -->
+            <div class="swiper-slide04">
+
+
+                <div class="overlay">
+                    <div class="overlay-original">
+                        <a href="https://nexus-official.com/" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                            <span>original page</span>
+                        </a>
+                    </div>
+                    <div class="overlay-clone">
+                        <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">
+                            <i class="fas fa-clone"></i>
+                            <span>clone page</span>
+                        </a>
+                    </div>
+                    <div class="overlay-github">
+                        <a href="https://github.com/HeoYunJeong/NEXUS" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>github Source</span>
+                        </a>
+                    </div>
+                </div>
+
+
                 <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">
-                    <div class="projects-img projects-img03"></div>
+                    <div class="projects-img projects-img04"></div>
                 </a>
                 <div class="projects-contents">
                     <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;NEXUS</p>
@@ -47,10 +137,35 @@
             </div>
         </swiper-slide>
         <swiper-slide>
-            <div class="swiper-slide04">
-                <!-- <div class="overlay"></div> -->
+            <div class="swiper-slide05">
+
+
+
+                <div class="overlay">
+                    <div class="overlay-original">
+                        <a href="https://www.inha.ac.kr/kr/index.do" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                            <span>original page</span>
+                        </a>
+                    </div>
+                    <div class="overlay-clone">
+                        <a href="https://heoyunjeong.github.io/inha-university/" target="_blank">
+                            <i class="fas fa-clone"></i>
+                            <span>clone page</span>
+                        </a>
+                    </div>
+                    <div class="overlay-github">
+                        <a href="https://github.com/HeoYunJeong/inha-university" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>github Source</span>
+                        </a>
+                    </div>
+                </div>
+
+
+
                 <a href="https://heoyunjeong.github.io/inha-university/" target="_blank">
-                    <div class="projects-img projects-img04"></div>
+                    <div class="projects-img projects-img05"></div>
                 </a>
                 <div class="projects-contents">
                     <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;인하대학교</p>
@@ -146,19 +261,26 @@
     }
 
     .projects-img01 {
-        background: url('../assets/stx_img.jpg') no-repeat center;
+        background: url('../assets/main-text-copy.png') no-repeat;
+        background-size: 3rem 1rem;
     }
 
     .projects-img02 {
-        background: url('../assets/sony_img.webp') no-repeat center;
+        background: url('../assets/stx_img.jpg') no-repeat center;
     }
 
     .projects-img03 {
-        background: url('../assets/nexus_img.jpg') no-repeat center;
+        background: url('../assets/sony_img.webp') no-repeat;
+
     }
 
     .projects-img04 {
-        background: url('../assets/inha_img.jpg') no-repeat center;
+        background: url('../assets/nexus_img.jpg') no-repeat center;
+    }
+
+    .projects-img05 {
+        background: url('../assets/inha_img.jpg') no-repeat;
+
     }
 
     .overlay {
@@ -167,7 +289,7 @@
         height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
         border-radius: 3rem;
         background: rgba(0, 0, 0, 0.7);
@@ -192,9 +314,24 @@
         text-transform: capitalize;
     }
 
+
+    .overlay-original a,
+    .overlay-clone a,
+    .overlay-github a {
+        color: #fff;
+    }
+
+    .overlay-original i,
+    .overlay-clone i,
+    .overlay-github i {
+        display: block;
+        font-size: 2.5rem;
+        color: #fff;
+    }
+
     .overlay-clone,
-    .overlay-github{
-        padding-top: 1rem;
+    .overlay-github01 {
+        margin: 4rem 0;
     }
 
     .overlay:hover {

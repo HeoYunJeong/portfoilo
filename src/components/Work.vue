@@ -72,9 +72,9 @@
         text-align: center;
         color: #12437e;
         text-transform: uppercase;
-        border: 1px solid #42303e;
+        border: 1.5px solid #12437e;
         border-radius: 1rem;
-        background: rgba(205, 195, 200, 1);
+        background: #fff;
     }
 
     .work-right__menu::after {
