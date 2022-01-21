@@ -1,5 +1,17 @@
 <template>
+
+
   <div class="wrap">
+
+    <div class="black-bg" v-if="OpenModal == true">
+      <div class="white-bg">
+        <h1>반갑습니다 허윤정의 포트폴리오 입니다.</h1>
+        <p> <span>본 포트폴리오는 vue3로 제작되었으며</span> <br> <span>chrome에 최적화 되어 있습니다.</span> <br> <span> 반응형은 1440px,
+            1024px,768px,425px에 최적화 되어있댜눙</span> </p>
+        <button @click="OpenModal = false">닫기</button>
+      </div>
+    </div>
+
     <Header />
     <router-view></router-view>
     <Footer />
@@ -12,6 +24,11 @@
 
   export default {
     name: 'App',
+    data() {
+      return {
+        OpenModal: true,
+      }
+    },
 
     components: {
       Header,
@@ -59,6 +76,39 @@
     font-family: 'Playfair Display', 'Noto Sans KR', sans-serif;
   }
 
+  .black-bg {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    z-index: 999;
+  }
+
+  .white-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 35%;
+    height: 45%;
+    background: #fff;
+    border-radius: 30px;
+    padding: 20px;
+  }
+
+  .white-bg h1 {
+    margin-top: 3rem;
+    text-align: center;
+  }
+
+  .white-bg p {
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 1.8rem;
+  }
+
   .wrap {
     /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#13437e+0,13437e+50,ffffff+50,ffffff+100 */
     background: #13437e;
@@ -88,6 +138,42 @@
     width: 100%;
     margin: 0 auto;
   }
+
+  .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #cdc3c8;
+    opacity: 1;
+  }
+
+  .swiper-pagination-bullet-active {
+    width: 17px;
+    height: 8px;
+    border-radius: 10px;
+    opacity: 1;
+    background: #948b92;
+  }
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
+    z-index: 10;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border: 1px solid #12437e;
+    border-radius: 50%;
+    background: rgba(18, 67, 126, 0.8);
+  }
+
 
   .clearfix::after {
     content: '';
