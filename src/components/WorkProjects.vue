@@ -6,12 +6,12 @@
             <div class="swiper-slide01">
 
                 <div class="overlay">
-                    <div class="overlay-original">
+                    <!-- <div class="overlay-original">
                         <a href="https://heoyunjeong.github.io/" target="_blank">
-                            <i class="fab fa-chrome"></i>
-                            <span>original page</span>
+                            
+                            <span><i class="fab fa-chrome"></i>original page</span>
                         </a>
-                    </div>
+                    </div> -->
 
                     <div class="overlay-github overlay-github01">
                         <a href="https://github.com/HeoYunJeong/portfolio" target="_blank">
@@ -61,7 +61,7 @@
                 </a>
                 <div class="projects-contents">
                     <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;stx 건설</p>
-                    <p class="projects-contents__time">제작기간: 1 week</p>
+                    <p class="projects-contents__time">제작기간: 1 weeks</p>
                     <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
             </div>
@@ -95,7 +95,7 @@
                 </a>
                 <div class="projects-contents">
                     <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;sony korea</p>
-                    <p class="projects-contents__time">제작기간: 1 week</p>
+                    <p class="projects-contents__time">제작기간: 1 weeks</p>
                     <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
             </div>
@@ -212,6 +212,7 @@
                     spaceBetween: 30,
                     centeredSlides: true,
                     loop: true,
+                    speed: 1200,
                     // observer: true,
                     // dbserverParents: true,
                     autoplay: {
@@ -223,6 +224,10 @@
                     },
                     navigation: true,
                     breakpoints: {
+                        1024: {
+                            slidesPerView: 2,
+                            slidesPerGroup: 1,
+                        },
                         768: {
                             slidesPerView: 2,
                             slidesPerGroup: 1,
@@ -325,8 +330,12 @@
 
     .overlay-original a,
     .overlay-clone a,
-    .overlay-github a {
+    .overlay-github a,
+    .overlay-original i,
+    .overlay-clone i,
+    .overlay-github i {
         color: #fff;
+        transition: color .2s;
     }
 
     .overlay-original i,
@@ -334,7 +343,6 @@
     .overlay-github i {
         display: block;
         font-size: 2.5rem;
-        color: #fff;
     }
 
     .overlay-clone,
@@ -344,6 +352,15 @@
 
     .overlay:hover {
         opacity: 1;
+    }
+
+    .overlay-original:hover a,
+    .overlay-original:hover i,
+    .overlay-clone:hover a,
+    .overlay-clone:hover i,
+    .overlay-github:hover a,
+    .overlay-github:hover i {
+        color: #85bcff;
     }
 
     .projects-contents {
@@ -368,5 +385,42 @@
         font-size: 1.8rem;
         text-transform: none;
         color: #675f65;
+    }
+
+    @media screen and (max-width: 1024px) {
+
+        .swiper-container {
+            height: 95%;
+            padding-top: 2rem;
+            padding-bottom: 0rem;
+        }
+
+        .projects-contents {
+            width: 80%;
+        }
+
+
+    @media screen and (max-width: 768px) {
+
+        .swiper-container {
+            height: 90%;
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        .projects-contents {
+            width: 100%;
+        }
+
+
+    .projects-contents__name {
+        font-size: 1.8rem;
+        line-height: 2.2rem;
+    }
+    .projects-contents__time,
+    .projects-contents__lang {
+        font-size: 1.6rem;
+    }
+    }
     }
 </style>

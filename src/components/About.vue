@@ -501,8 +501,17 @@
 
     @media screen and (max-width: 768px) {
 
+        .about-left__content p {
+            font-size: 1.4rem;
+            line-height: 2;
+            color: #fff;
+            margin-bottom: 4rem;
+            word-break: keep-all;
+        }
+
+
         .about-left {
-            padding-right: 1rem;
+            padding-right: 0rem;
         }
 
         .important {
@@ -536,15 +545,31 @@
             margin-right: 0rem;
             background: #12437e;
             padding: 3rem 0;
+            animation: none;
+        }
+
+        .swiper-container {
+            animation: show 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+            ;
+        }
+
+        @keyframes show {
+            0% {
+                transform: translateX(-10rem);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
         }
 
         .about-left__content {
-            margin-left: 3rem;
+            margin-left: 5rem;
         }
 
         .about-left__title {
 
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
         }
 
         .about-left__title h4 {
@@ -553,12 +578,12 @@
         }
 
         .about-left__intro {
-            margin-left: 3rem;
+            margin-left: 5rem;
             margin-bottom: 3rem;
         }
 
         .about-left__content p {
-            line-height: 1.9;
+            line-height: 3;
             margin-bottom: 3rem;
         }
 
@@ -594,7 +619,7 @@
         }
     }
 
-    .swiper-pagination > .swiper-pagination-bullet-active {
+    .swiper-pagination>.swiper-pagination-bullet-active {
         background: #fff !important;
     }
 </style>

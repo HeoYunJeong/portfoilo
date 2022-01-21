@@ -133,15 +133,14 @@
     @media screen and (max-width:1024px) {
 
         .work-right {
-            width: 45%;
-            height: 50rem;
+            width: 70%;
             margin-left: 0rem;
             display: flex;
             justify-content: center;
         }
 
         .work-right__menu {
-            width: 90%;
+            width: 15rem;
         }
 
         .work-right__menu span {
@@ -149,12 +148,12 @@
         }
 
         .work-right__view {
-            width: 90%;
-            height: 40rem;
-            border: 1px solid #12437e;
+            width: 100%;
+            height: 60rem;
+            border: 1px solid rgba(205, 195, 200, 0.9);
             border-radius: 3rem;
-            box-shadow: 1.5rem 1.5rem rgba(18, 67, 126, 0.8);
-            padding-top: 5rem;
+            box-shadow: 1.5rem 1.5rem rgba(205, 195, 200, 0.9);
+            padding-top: 3rem;
             animation: shadow-pop-br 1s;
         }
     }
@@ -165,17 +164,11 @@
 
         .work-right__menu {
             margin-top: 3rem;
-            width: 90%;
+            width: 15rem;
             margin-bottom: 3rem;
         }
 
-        .work-right__menu span {
-            width: 50%;
-            margin-right: 0;
-            font-size: 1.6rem;
-            color: #12437e;
-            text-align: center;
-            cursor: pointer;
+                .work-right__view {
         }
 
     }
@@ -186,22 +179,18 @@
 
         .work-right {
             width: 100%;
-            height: 60rem;
             align-items: center;
-            padding-bottom: 3rem;
         }
 
         .work-right__menu span {
-            width: 40%;
             font-size: 1.8rem;
             color: #12437e;
             text-align: center;
-            cursor: pointer;
         }
 
 
         .work-right__view {
-            height: 45rem;
+            height: 100%;
         }
     }
 </style>
