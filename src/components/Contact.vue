@@ -271,7 +271,7 @@
         }
 
         .github-img i:hover {
-            font-size: 15rem;
+            display: none;
         }
 
         /* 컨택트 오른쪽 반응형 425 */

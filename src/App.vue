@@ -5,10 +5,13 @@
 
     <div class="black-bg" v-if="OpenModal == true">
       <div class="white-bg">
+        <div class="modal-contents">
         <h1>반갑습니다 허윤정의 포트폴리오 입니다.</h1>
-        <p> <span>본 포트폴리오는 vue3로 제작되었으며</span> <br> <span>chrome에 최적화 되어 있습니다.</span> <br> <span> 반응형은 1440px,
-            1024px,768px,425px에 최적화 되어있댜눙</span> </p>
-        <button @click="OpenModal = false">닫기</button>
+        <p> <span>본 포트폴리오는 <strong>Vue.js</strong> 로 제작되었으며,</span> <br> <span><strong>Google Chrome</strong> 에 최적화되어
+            있습니다.</span> <br> <span> (해상도: 1440px,
+            1024px, 768px, 425px)</span> </p>
+        <button @click="OpenModal = false" class="modal-close-bt">닫기</button>
+        </div>
       </div>
     </div>
 
@@ -91,22 +94,35 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 35%;
-    height: 45%;
+    width: 60rem;
+    height: 40rem;
     background: #fff;
     border-radius: 30px;
     padding: 20px;
   }
 
-  .white-bg h1 {
+  .modal-contents {
+    position: relative;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal-contents h1 {
     margin-top: 3rem;
     text-align: center;
   }
 
-  .white-bg p {
+  .modal-contents p {
     margin-top: 3rem;
     text-align: center;
     font-size: 1.8rem;
+  }
+
+  .modal-close-bt {
+    margin-top: 3rem;
+    font-size: 2rem;
   }
 
   .wrap {
@@ -158,20 +174,23 @@
 
   .swiper-button-next,
   .swiper-button-prev {
-    position: absolute;
     top: 50%;
     width: 40px;
     height: 40px;
-    margin-top: calc(0px - (var(--swiper-navigation-size)/ 2));
-    z-index: 10;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: #fff;
     border: 1px solid #12437e;
     border-radius: 50%;
     background: rgba(18, 67, 126, 0.8);
+  }
+
+  .swiper-button-next:after,
+  .swiper-button-prev:after {
+    font-family: swiper-icons;
+    font-size: 20px;
+    /* font-weight: bold; */
+    text-transform: none !important;
+    /* text-shadow: -2px 0 #12437e, 0 2px #12437e, 2px 0 #12437e, 0 -2px #12437e; */
   }
 
 

@@ -6,13 +6,6 @@
             <div class="swiper-slide01">
 
                 <div class="overlay">
-                    <!-- <div class="overlay-original">
-                        <a href="https://heoyunjeong.github.io/" target="_blank">
-                            
-                            <span><i class="fab fa-chrome"></i>original page</span>
-                        </a>
-                    </div> -->
-
                     <div class="overlay-github overlay-github01">
                         <a href="https://github.com/HeoYunJeong/portfolio" target="_blank">
                             <i class="fab fa-github"></i>
@@ -28,6 +21,14 @@
                     <p class="projects-contents__name"><i class="fas fa-caret-right"></i>&nbsp;yunjeong's portfolio</p>
                     <p class="projects-contents__time">제작기간: 4 weeks</p>
                     <p class="projects-contents__lang">사용언어: Vue.js / HTML5 / CSS3 </p>
+                </div>
+
+                <div class="mobile-link">
+                    <div class="mobile-link-github">
+                        <a href="https://github.com/HeoYunJeong/portfolio" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </swiper-slide>
@@ -64,8 +65,27 @@
                     <p class="projects-contents__time">제작기간: 1 weeks</p>
                     <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
+
+                <div class="mobile-link">
+                    <div class="mobile-link-original">
+                        <a href="http://www.stxconst.co.kr/" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-link-clone">
+                        <a href="https://heoyunjeong.github.io/STXconst/" target="_blank">
+                            <i class="fas fa-clone"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-link-github">
+                        <a href="https://github.com/HeoYunJeong/STXconst" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </swiper-slide>
+
         <swiper-slide>
             <div class="swiper-slide03">
 
@@ -98,11 +118,30 @@
                     <p class="projects-contents__time">제작기간: 1 weeks</p>
                     <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
+
+                <div class="mobile-link">
+                    <div class="mobile-link-original">
+                        <a href="https://www.sony.co.kr/" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-link-clone">
+                        <a href="https://heoyunjeong.github.io/SONY/" target="_blank">
+                            <i class="fas fa-clone"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-link-github">
+                        <a href="https://github.com/HeoYunJeong/SONY" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+                
             </div>
         </swiper-slide>
+
         <swiper-slide>
             <div class="swiper-slide04">
-
 
                 <div class="overlay">
                     <div class="overlay-original">
@@ -125,7 +164,6 @@
                     </div>
                 </div>
 
-
                 <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">
                     <div class="projects-img projects-img04"></div>
                 </a>
@@ -134,12 +172,30 @@
                     <p class="projects-contents__time">제작기간: 2 weeks</p>
                     <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
+
+                <div class="mobile-link">
+                    <div class="mobile-link-original">
+                        <a href="https://nexus-official.com/" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-link-clone">
+                        <a href="https://heoyunjeong.github.io/NEXUS/" target="_blank">
+                            <i class="fas fa-clone"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-link-github">
+                        <a href="https://github.com/HeoYunJeong/NEXUS" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </swiper-slide>
+
         <swiper-slide>
             <div class="swiper-slide05">
-
-
 
                 <div class="overlay">
                     <div class="overlay-original">
@@ -162,8 +218,6 @@
                     </div>
                 </div>
 
-
-
                 <a href="https://heoyunjeong.github.io/inha-university/" target="_blank">
                     <div class="projects-img projects-img05"></div>
                 </a>
@@ -172,6 +226,25 @@
                     <p class="projects-contents__time">제작기간: 3 weeks</p>
                     <p class="projects-contents__lang">사용언어: HTML5 / CSS3 / JQuery</p>
                 </div>
+
+                <div class="mobile-link">
+                    <div class="mobile-link-original">
+                        <a href="https://www.inha.ac.kr/kr/index.do" target="_blank">
+                            <i class="fab fa-chrome"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-link-clone">
+                        <a href="https://heoyunjeong.github.io/inha-university/" target="_blank">
+                            <i class="fas fa-clone"></i>
+                        </a>
+                    </div>
+                    <div class="mobile-link-github">
+                        <a href="https://github.com/HeoYunJeong/inha-university" target="_blank">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </swiper-slide>
     </swiper>
@@ -360,7 +433,7 @@
     .overlay-clone:hover i,
     .overlay-github:hover a,
     .overlay-github:hover i {
-        color: #85bcff;
+        color: #748497;
     }
 
     .projects-contents {
@@ -387,6 +460,22 @@
         color: #675f65;
     }
 
+    .mobile-link {
+        position: relative;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+
+    .mobile-link a {
+        margin: 0 3.5rem;
+        font-size: 3rem;
+        color: #675f65;
+    }
+
+
+
     @media screen and (max-width: 1024px) {
 
         .swiper-container {
@@ -400,27 +489,42 @@
         }
 
 
-    @media screen and (max-width: 768px) {
+        @media screen and (max-width: 768px) {
+
+            .swiper-container {
+                height: 90%;
+                padding-top: 2rem;
+                padding-bottom: 3rem;
+            }
+
+            .projects-contents {
+                width: 100%;
+            }
+
+
+            .projects-contents__name {
+                font-size: 1.8rem;
+                line-height: 2.2rem;
+            }
+
+            .projects-contents__time,
+            .projects-contents__lang {
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 425px) {
 
         .swiper-container {
-            height: 90%;
-            padding-top: 2rem;
-            padding-bottom: 3rem;
+            height: 100%;}
+
+        .overlay {
+            display: none;
         }
 
-        .projects-contents {
-            width: 100%;
-        }
-
-
-    .projects-contents__name {
-        font-size: 1.8rem;
-        line-height: 2.2rem;
-    }
-    .projects-contents__time,
-    .projects-contents__lang {
-        font-size: 1.6rem;
-    }
+        .mobile-link {
+        display: flex;
     }
     }
 </style>
