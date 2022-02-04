@@ -172,7 +172,7 @@
         color: rgba(255, 255, 255, 0.3);
     }
 
-    .skill i:hover {
+    .skill-img i:hover {
         color: #fff;
         transition: color 0.5s ease-in-out;
         animation: rotate-vert-center 0.5s;
